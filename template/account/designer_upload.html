@@ -8,7 +8,9 @@
   <link rel="stylesheet" type="text/css" href="../../account/account.css">
   <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
   <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- {%include file="$root/template/common/navbar.html"%} -->
@@ -48,7 +50,7 @@
     
     
 <div id="admin_main">
-          <form action="" method="post" enctype="multipart/form-data">
+          <form name="productForm" action="" method="post" enctype="multipart/form-data">
             
             <table class="upload_form">
               <tr>
@@ -58,13 +60,14 @@
               </tr>
               <tr>
                 <td>作品名称<span class="required">*</span></td>
-                <td><input type="text" class="input-field" name="" value=""/>
-                  </td>
+                <td><input type="text" name="work_name" value="" required="true"/></td>
               </tr>
               <tr>
                 <td>作品类别<span class="required">*</span></td>
                 <td>
-                  <select id="mySelect1" onchange="myFunction()">
+                  <select id="mySelect1" onchange="myFunction()" required>
+                    <option value="">请选择</option>
+                    <option disabled="disabled">----</option>
                     <option value="customize">家具设计</option>
                     <option value="renew">空间规划</option>
                     <option value="addroom">室内装修</option>
@@ -75,8 +78,8 @@
               </tr>
               <tr>
                 <td>设计图片<span class="required">*</span></td>
-                <td><input type="file" name="designpicture">
-                  <div id="type_counter">最多上传10张</div>
+                <td><input type="file" name="designpicture" required>
+                  <div class="type_counter">最多上传10张</div>
                 </td>
               </tr>
               <tr>
@@ -86,8 +89,8 @@
               </tr>
               <tr>
                 <td>项目成本<span class="required">*</span></td>
-                <td><input type="number" class="input-field" name="" value="" /><a title="popup" onclick="return popup()"><i class="fa fa-calculator icon_style" aria-hidden="true"> 报价计算器</i></a>
-                <div id="type_counter">只输入数字</div>
+                <td><input type="number" class="input-field" name="" value="" type="number" min="1" required="true" /><a title="popup" onclick="return popup()"><i class="fa fa-calculator icon_style" aria-hidden="true"> 报价计算器</i></a>
+                <div class="type_counter">只输入数字</div>
               </td>
               </tr>
               <tr>
@@ -97,7 +100,7 @@
               </tr>
               <tr>
                 <td>内容简介 <span class="required">*</span></td>
-                <td><textarea maxlength="250" id="status" name="status" class="textarea-field supplier_info_textarea" onkeydown='countChar("status","counter");' onkeyup='countChar("status","counter");'></textarea></br><div id="type_counter">可以输入<span id="counter">250</span>字<br/></div></td>
+                <td><textarea maxlength="250" id="status" name="status" class="textarea-field supplier_info_textarea" onkeydown='countChar("status","counter");' onkeyup='countChar("status","counter");' required="true"></textarea></br><div class="type_counter">可以输入<span id="counter">250</span>字<br/></div></td>
               </tr>
               <tr>
                 <td colspan="2">
@@ -107,7 +110,9 @@
               <tr>
                 <td>作品风格<span class="required">*</span></td>
                 <td>
-                  <select>
+                  <select id="mySelect2" required>
+                    <option value="">请选择</option>
+                    <option disabled="disabled">----</option>
                     <option value="customize">Mid-century Modern Style</option>
                     <option value="renew">Modern Style</option>
                     <option value="addroom">Art Deco Style</option>
@@ -124,7 +129,9 @@
               <tr>
                 <td>空间面积<span class="required">*</span></td>
                 <td>
-                  <select>
+                  <select id="mySelect3" required>
+                    <option value="">请选择</option>
+                    <option disabled="disabled">----</option>
                     <option value="customize">Smaller: < 70 sq. ft</option>
                     <option value="renew">Small: 71 - 100 sq.ft</option>
                     <option value="addroom">Medium: 101 - 200 sq. ft</option>
@@ -136,7 +143,9 @@
               <tr>
                 <td>形状<span class="required">*</span></td>
                 <td>
-                  <select id="mySelect1" onchange="myFunction()">
+                  <select id="mySelect4" onchange="myFunction()" required>
+                    <option value="">请选择</option>
+                    <option disabled="disabled">----</option>
                     <option value="customize">正方形</option>
                     <option value="renew">长方形</option>
                     <option value="addroom">多边形</option>
@@ -146,7 +155,9 @@
               <tr>
                 <td>布局<span class="required">*</span></td>
                 <td>
-                  <select id="mySelect1" onchange="myFunction()">
+                  <select id="mySelect5" onchange="myFunction()" required>
+                    <option value="">请选择</option>
+                    <option disabled="disabled">----</option>
                     <option value="customize">一字型</option>
                     <option value="renew">一字型带中岛</option>
                     <option value="addroom">L型</option>
@@ -183,15 +194,15 @@
               <tr>
                 <td>物料编号<span class="required">*</span></td>
                 <td id="addmaterial">
-                  <input type="text" class="input-field-short" name="" value="" />
-                  <input type="text" class="input-field-short" name="" value="" />
+                  <input type="text" class="input-field-short" name="" value="" required="true" />
+                  <input type="text" class="input-field-short" name="" value="" required="true" />
                   <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 物料库搜索</i></a>
-                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div id="type_counter">输入物料编号<span class="right">输入数量</span></div>
+                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div class="type_counter">输入物料编号<span class="right">输入数量</span></div>
                 </td>
               </tr>
             </tbody>
             </table>
-              <span>&nbsp;</span><input class="submit_button button_left" type="submit" value="提交"/>
+              <span>&nbsp;</span><input class="submit_button button_left" type="submit" id="submitButton" value="提交"/>
           </form>
       </div>
   </div>
@@ -261,7 +272,43 @@ function popmaterial()
         var trId = obj.parentNode.parentNode.id;  
         var trObj = document.getElementById(trId);  
         document.getElementById("tb").removeChild(trObj);  
-    } 
+    }
+    /*
+  $("#productForm").formValidation({
+    framework: 'bootstrap',
+    icon: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
+    row: {
+      valid: 'field-success',
+      invalid: 'field-error'
+    },
+    fields: {
+      work_name: {
+        validators: {
+          notEmpty: {
+            message: '作品名字是必需的'
+          },
+          stringLength: {
+            min: 1,
+            max: 50,
+            message: 'The username must be more than 1 and less than 30 characters long'
+          }
+        }
+      },
+      password: {
+        validators: {
+          notEmpty: {
+            message: 'The password is required'
+          }
+        }
+      }
+    }
+  });
+  */
+
 </script>
 
 
