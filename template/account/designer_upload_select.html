@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+</head>
+<body>
+<!-- {%include file="$root/template/common/navbar.html"%} -->
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/products.html"><div class="nav">产品</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav choose">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_sign_signin">登陆</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>
+
+
+<div id="body_dash">
+   <!--  {%include file="$root/template/common/sidebar.html"%} -->
+    <div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_reddot"></div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+      <a class="admin_button" href="../account/designer_manage.html">申请认证</a>
+      <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
+    </div>    
+</div>
+    
+    
+    <div id="admin_main">
+        <div class="productLink topspace"><a href="designer_manage.html">管理作品</a>/<a href="designer_upload.html">上传设计作品</a>/第二步：选择使用物料</div>
+        <div id="select_product_title">请填写设计作品中使用到的物料</div>
+
+        <div id="select_design_product">      
+          <img id="select_design_product" src="../../image/t2.jpg"/>
+        </div>
+
+
+        <table id="productList">
+        <tr>
+          <th>编号</th>
+          <th>产品编号</th>
+          <th>图片</th>
+          <th>名称</th>
+          <th>品牌</th>
+          <th>品类</th> 
+          <th>款式</th>     
+          <th>价格</th>
+          <th>编辑</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>添加</br>删除</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>CH3242</td>
+          <td><img id="select_product_pic" src="../../image/p1.png"></td>
+          <td>椅子</td>
+          <td>CHair</td>
+          <td>B-09R</td>
+          <td>A7</td>
+          <td>$234</td>
+          <td>添加</br>删除</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>CH3242</td>
+          <td><img id="select_product_pic" src="../../image/p2.png"></td>
+          <td>椅子</td>
+          <td>CHair</td>
+          <td>B-09R</td>
+          <td>A7</td>
+          <td>$234</td>
+          <td>添加</br>删除</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>CH3242</td>
+          <td><img id="select_product_pic" src="../../image/p2.png"></td>
+          <td>椅子</td>
+          <td>CHair</td>
+          <td>B-09R</td>
+          <td>A7</td>
+          <td>$234</td>
+          <td>添加</br>删除</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>CH3242</td>
+          <td><img id="select_product_pic" src="../../image/p2.png"></td>
+          <td>椅子</td>
+          <td>CHair</td>
+          <td>B-09R</td>
+          <td>A7</td>
+          <td>$234</td>
+          <td>添加</br>删除</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>CH3242</td>
+          <td><img id="select_product_pic" src="../../image/p2.png"></td>
+          <td>椅子</td>
+          <td>CHair</td>
+          <td>B-09R</td>
+          <td>A7</td>
+          <td>$234</td>
+          <td>添加</br>删除</td>
+        </tr>
+      </table>
+      <a href="#"><div id="selected" href="#">提交</div></a>
+    </div>
+    
+  </div>
+
+{%include file="$root/template/common/footer.html"%}
+
+ 
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+<!--    {%include file="$root/templete/common/sidebar.html"%} -->
+<div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_reddot"></div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+    </div>    
+</div>
+
+  <div id="admin_main">
+      
+      <div id="admin_content">
+ 
+        <form id="designer_search">
+          <input id="admin_search" type="text" name="productname" value="">
+        </form>
+        <div class="select_box">
+      <label class="dropdown">
+        <select>
+                <option selected>按品牌选择</option>
+                <option>Blue</option>
+                <option >Red</option>
+                <option>Green</option>
+                <option>Yellow</option>
+                <option>Brown</option>
+        </select>
+        </label>
+        <label class="dropdown">
+        <select>
+                <option selected>按品类选择</option>
+                <option>Blue</option>
+                <option >Red</option>
+                <option>Green</option>
+                <option>Yellow</option>
+                <option>Brown</option>
+        </select>
+        </label>
+        <label class="dropdown">
+        <select>
+                <option selected>按型号选择</option>
+                <option>Blue</option>
+                <option >Red</option>
+                <option>Green</option>
+                <option>Yellow</option>
+                <option>Brown</option>
+        </select>
+        </label>
+        <label class="dropdown">
+        <select>
+                <option selected>按颜色选择</option>
+                <option>Blue</option>
+                <option >Red</option>
+                <option>Green</option>
+                <option>Yellow</option>
+                <option>Brown</option>
+        </select>
+      </label>
+      </div>
+
+      <table id="productList">
+        <tr>
+          <th>图片</th>
+          <th>产品编号</th>
+          <th>名称</th>
+          <th>品牌</th>
+          <th>品类</th>
+          <th>材质</th>
+          <th>款式</th>
+          <th>颜色</th>
+          <th>尺寸</th>
+          <th id="description">描述</th>
+          <th>价格</th>
+        </tr>
+        <tr>
+          <td><img id="product_pic" src="../../image/p1.png"></td>
+          <td>B09-R</td>
+          <td>Creme Maple Glazed</td>
+          <td>JK</td>
+          <td>BASE CABINET</td>
+          <td>Wood</td>
+          <td>A7</td>
+          <td>Creme Maple</td>
+          <td>W9 H34 D24</td>
+          <td>BASE CABINET WITH ONE DOOR,ONE DRAWER;1 DRWER;1 DOOR;1 ADG.SHELF</td>
+          <td>$239.14</td>
+        </tr>
+        <tr>
+          <td><img id="product_pic" src="../../image/p2.png"></td>
+          <td>B09-R</td>
+          <td>Creme Maple Glazed</td>
+          <td>JK</td>
+          <td>BASE CABINET</td>
+          <td>Wood</td>
+          <td>A7</td>
+          <td>Creme Maple</td>
+          <td>W9 H34 D24</td>
+          <td>BASE CABINET WITH ONE DOOR,ONE DRAWER;1 DRWER;1 DOOR;1 ADG.SHELF</td>
+          <td>$239.14</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>

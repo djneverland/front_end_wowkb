@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+<div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">物料商</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">   
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a> 
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../admin/admin_manage.html"><div id="sidebar_message">12</div>订单管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">销售渠道</a>
+      <a class="admin_button" href="../account/designer_manage.html">申请认证</a>
+      <a class="admin_button" href="../account/designer_manage.html">企业信息</a>
+
+    </div>    
+</div>
+
+  <div id="admin_main">
+      
+    <div id="admin_content">
+       
+
+      <table id="productList">
+        <tr>
+          <th>订单编号</th>
+          <th>下单时间</th>
+          <th>名称</th>
+          <th>数量</th>
+          <th>总价</th>
+          <th>订单状态</th>
+        </tr> 
+        <tr>
+          <td><a href="supplier_order_detail.html"><span class="order_num">JK1213141441</span></a></td>
+          <td>2017.03.09</td>
+          <td>美式12*10橱柜全套</td>
+          <td>42</td>
+          <td>$29999</td>
+          <td>已付款</td>
+        </tr>
+        <tr>
+          <td><a class="order_num" href="">JK1213141441</a></td>
+          <td>2017.03.21</td>
+          <td>欧式8*12橱柜全套</td>
+          <td>42</td>
+          <td>$29999</td>
+          <td>已出货</td>
+        </tr>
+        <tr>
+          <td><a class="order_num" href="">JK1213141441</a></td>
+          <td>2017.03.21</td>
+          <td>美式10*10橱柜全套</td>
+          <td>42</td>
+          <td>$29999</td>
+          <td>已完成</td>
+        </tr>
+        <tr>
+          <td><a class="order_num" href="">JK1213141441</a></td>
+          <td>2017.03.21</td>
+          <td>美式12*16橱柜全套</td>
+          <td>42</td>
+          <td>$29999</td>
+          <td>申请退换</td>
+        </tr>
+      
+     </table>
+    </div>
+  </div>
+</div>
+
+{%include file="$root/template/common/footer.html"%}
+
+  </body>
+</html>

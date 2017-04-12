@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+<!--    {%include file="$root/templete/common/sidebar.html"%} -->
+<div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_message">12</div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+    </div>    
+</div>
+
+  <div id="admin_main">
+      
+      <div id="admin_content">
+        <a id="admin_edit_button" href="designer_upload.html">上传作品</a>
+        <a title="popup" onclick="return popup()"><div id="admin_edit_button">搜索模型库</div></a>
+
+        <form id="search">
+          <input id="admin_search" type="text" name="designname" value="作品名搜索">
+        </form>
+
+      <table id="productList">
+        <tr>
+          <th><input id="toggle" type="checkbox"></th>
+          <th>图片</th>
+          <th>系统编号</th>
+          <th>名称</th>
+          <th>空间尺寸</th>
+          <th>预估报价</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input id="toggle" type="checkbox"></td>
+          <td><img id="design_pic" src="../../image/t1.jpg"></td>
+          <td>121001</td>
+          <td>美式厨房设计</td>
+          <td>10*10</td>
+          <td>$9999</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            |
+            <a id="delete" href="#">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input id="toggle" type="checkbox"></td>
+          <td><img id="design_pic" src="../../image/t2.jpg"></td>
+          <td>121001</td>
+          <td>美式浴室设计</td>
+          <td>8*8</td>
+          <td>$9999</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            |
+            <a id="delete" href="#">删除</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+{%include file="$root/template/common/footer.html"%}
+<script type="text/javascript">
+function popup()
+{
+        window.open("http://www.dreamdu.com/xhtml/", "", "toolbar=no");
+        return false;
+}
+</script>
+  </body>
+</html>

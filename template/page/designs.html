@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../page/page.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<!-- {%include file="$root/template/common/navbar.html"%} -->
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/products.html"><div class="nav">产品</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav choose">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_signup">登陆</div></a>
+      <a href="#"><div class="nav">购物车(0)</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>
+
+<div id="showArea">
+  <div id="search_slogan">所见即所得</div>
+    <div id="showBox">
+        <form>
+            <input id="search_input" type="text" placeholder="" required>
+            <input id="search_button" type="button" value="搜索">
+        </form>
+    </div>
+    <img id="showArea_pic" src="../../image/ad2.png">
+</div>
+
+<div id="body">
+  <div id="container">
+    <div id="sidebar">      
+
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                  <div class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">按类别选择
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <ul id="catogory_list">
+                      <li class="secondList">全部类别</li>
+                      <li>厨房</li>
+                      <li>浴室</li>
+                      <li>卫生间</li>
+                      <li>卧室</li>
+                      <li>客厅</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                  <div class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">按品牌选择
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <ul id="catogory_list">
+                      <li class="secondList">全部品牌</li>
+                      <li>Branks</li>
+                      <li>ikea</li>
+                      <li>pinpai</li>
+                      <li>wowkb</li>
+                      <li>JK</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                  <div class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">按规格选择
+                      </a>
+                  </div>
+              </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <ul id="catogory_list">
+                  <li class="secondList">全部规格</li>
+                  <li>10*10</li>
+                  <li>8*8</li>
+                  <li>10*16</li>
+                  <li>8*12</li>
+                  <li>18*20</li>
+              </ul>
+          </div>
+          </div>
+      </div>
+    </div><!-- sidebar -->
+
+    <div id="mainContent">
+      <!-- <div id="search_result">共有2999个带有“XX"的产品</div> -->
+      <div id="mainarea_topbar">
+        <div class="mainarea_topbar_button">好评</div>
+        <div class="mainarea_topbar_button">精选</div>
+        <div class="mainarea_topbar_button">热门</div>
+        <div class="mainarea_topbar_button">关注量</div>
+      </div>
+
+      <div class="mainArea">         
+      <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+       
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+   
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+   
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+       
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+    
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>
+      
+              <a href="design_detail.html">
+        <div class="designs_project">
+          <div class="designs_project_pic">
+            <img class="designs_project_pic" src="../../image/t1.jpg">
+          </div>
+          <div class="admin_collect_intro">
+            <div class="admin_collect_title">美式厨房设计</div>
+            <div class="admin_collect_designer">设计师：XXX</div>
+          </div>
+          <div class="designs_icon">
+              <img class="subtitle_icon1" src="../../image/see.png">
+              <div class="icon_title">234</div>
+              <img class="subtitle_icon2" src="../../image/like.png">
+              <div class="icon_title">12</div>
+            </div>
+        </div>
+      </a>   
+         </div>
+   <!--       <div id="show_more">显示更多</div> -->
+    </div> <!-- mainContent -->
+  </div>
+</div>
+
+<!--   {%include file="$root/template/common/footer.html"%} -->
+<div id="bottombar">
+    <div class="bottom_content">
+      <div class="bottom_link">
+        <div class="bottom_link_line">
+          <ul class="bottom_list">
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>加入我们</li>
+          </ul>
+        </div>
+        <div class="bottom_blank"></div>
+        <div class="bottom_link_line">
+          <div id="footer_partner">合作伙伴</div>
+      <img id="footer_logo" src="../../image/bottom_logo.png">
+        </div>
+      </div>
+    </div>
+</div>
+  
+</body>
+</html>
+

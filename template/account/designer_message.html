@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+<!--    {%include file="$root/templete/common/sidebar.html"%} -->
+<div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_message">12</div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+    </div>    
+</div>
+
+  <div id="admin_main">
+      
+      <div id="admin_content">
+
+      <table id="productList">
+        <tr>
+          <th>作品图片</th>
+          <th>作品名称</th>
+          <th>用户姓名</th>
+          <th>用户电话</th>
+          <th>用户邮箱</th>
+        </tr>
+        <tr>
+          <td><img id="design_pic" src="../../image/t1.jpg"></td>
+          <td>欧式橱柜定制</td>
+          <td>AAA</td>
+          <td>000-000-0000</td>
+          <td>xxx@xxx.com</td>
+        </tr>
+        <tr>
+          <td><img id="design_pic" src="../../image/t2.jpg"></td>
+          <td>欧式橱柜定制</td>
+          <td>AAA</td>
+          <td>000-000-0000</td>
+          <td>xxx@xxx.com</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WOWKB Caculator</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/caculator.css">
+  <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+</head>
+<body>
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+  </div>
+  <div id="nav_link1">
+      <a href=""><div class="nav">注册</div></a>
+      <a href=""><div id="nav_sign_signin">登陆</div></a>
+  </div>
+
+  <div id="nav_bg"></div>
+</div>
+
+<div id="body_dash">
+  <div class="main_content">
+    <div class="top_intro">
+      <h3>价格预算器</h3>
+      已经有预算？需要创造一个？</br>
+      无论哪种方式，我们的预算计算器可以帮助！设定预算期望对于任何重建或新建筑项目的成功至关重要。我们开发了一个简单易用的工具，可以帮助您了解不同的成本影响，以及一个典型预算如何在不同领域之间分配成本的指南。最后，您可以打印，保存或分享您的预算大纲。
+    </div>
+    <div class="each_module">
+      <div class="module_title">服务项目</div>
+      <div class="module_content">
+        <table class="caculator_table">
+            <tr>
+              <td class="table_left">选择服务项目</td>
+              <td>
+                <select>
+                <option>橱柜家居设计</option>
+                <option>厨房空间设计</option>
+                <option>厨房装修设计</option>
+              </select>
+            </td>
+            </tr>
+          </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+    <div class="each_module">
+      <div class="module_title">预算价格</div>
+      <div class="module_content">
+        <div class="module_sub">
+          <table class="caculator_table">
+            <tr>
+              <td class="table_left">按心理预算</td>
+              <td><input type="text" class="numberinput"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="module_sub sub_right">
+          <table class="caculator_table">
+            <tr>
+              <td class="table_left">按房屋价值</td>
+              <td><input type="text" class="numberinput"></td>
+            </tr>
+            <tr>
+              <td class="table_left">预算价格比例</td>
+              <td>
+              <select>
+                <option>5%</option>
+                <option>10%</option>
+                <option>15%</option>
+                <option>20%</option>
+                <option>25%</option>
+                <option>30%</option>
+                <option>35%</option>
+                <option>40%</option>
+                <option>45%</option>
+                <option>50%</option>
+              </select>
+            </td>
+            </tr>
+            <tr>
+              <td class="table_left">预算价格</td>
+              <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            </tr>
+          </table>  
+        </div>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+    <div class="each_module">
+      <div class="module_title">产品
+        <input type="button" class="title_button" onclick="add1()" value="添加">
+      </div>
+      <div class="module_content">
+        <table class="caculator_table" id ="tb1">
+          <tr>
+            <th class="table_left">名称</th>
+            <th>单价</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>总额</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="table_left"><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            <td><input type="button" class="table_white" onclick='del1(this)' value="删除"></td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+
+    <div class="each_module">
+      <div class="module_title">设计
+        <input type="button" class="title_button" onclick="add2()" value="添加">
+      </div>
+      <div class="module_content">
+        <table class="caculator_table" id ="tb2">
+          <tr>
+            <th class="table_left">名称</th>
+            <th>单价</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>总额</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="table_left"><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            <td><input type="button" class="table_white" onclick='del2(this)' value="删除"></td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+
+    <div class="each_module">
+      <div class="module_title">施工
+        <input type="button" class="title_button" onclick="add3()" value="添加">
+      </div>
+      <div class="module_content">
+        <table class="caculator_table" id ="tb3">
+          <tr>
+            <th class="table_left">名称</th>
+            <th>单价</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>总额</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="table_left"><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            <td><input type="button" class="table_white" onclick='del3(this)' value="删除"></td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+
+    <div class="each_module">
+      <div class="module_title">其他
+        <input type="button" class="title_button" onclick="add4()" value="添加">
+      </div>
+      <div class="module_content">
+        <table class="caculator_table" id ="tb4">
+          <tr>
+            <th class="table_left">名称</th>
+            <th>单价</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>总额</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="table_left"><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            <td><input type="button" class="table_white" onclick='del4(this)' value="删除"></td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+    <div class="each_module">
+      <div class="module_title">价格折扣明细
+        <input type="button" class="title_button" onclick="add5()" value="添加">
+      </div>
+      <div class="module_content">
+        <table class="caculator_table" id ="tb5">
+          <tr>
+            <th class="table_left">折扣名称</th>
+            <th>比率</th>
+            <th>折扣价格</th>
+          </tr>
+          <tr>
+            <td class="table_left"><input type="text" class="numberinput"></td>
+            <td><input type="text" class="numberinput"></td>
+            <td><div class="numberoutput">$<span class="outputnum">0</span></div></td>
+            <td><input type="button" class="table_white" onclick='del5(this)' value="删除"></td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+
+    <div class="each_module">
+      <div class="module_title">总造价</div>
+      <div class="module_content">
+        <table class="caculator_table">
+          <tr>
+            <td colspan="2" class="table_left table_total">项目总造价&nbsp;
+            <div class="numberoutput totaloutput">$<span class="outputnum">0</span></div></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" class="total_button" value="计算">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="button" class="total_button" value="保存">
+            </td>
+          </tr>
+        </table>
+      </div><!-- module_content -->
+    </div><!-- each_module -->
+
+  </div><!-- main_content -->     
+</div>
+<script type="text/javascript">
+ function add1() {  
+        var trObj = document.createElement("tr");  
+        trObj.id = new Date().getTime();  
+        trObj.innerHTML = "<td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><div class='numberoutput'>$<span class='outputnum'>0</span></div></td><td><input type='button' class='table_button' value='删除'' onclick='del1(this)'></td>";  
+        document.getElementById("tb1").appendChild(trObj);  
+    }  
+function add2() {  
+        var trObj = document.createElement("tr");  
+        trObj.id = new Date().getTime();  
+        trObj.innerHTML = "<td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><div class='numberoutput'>$<span class='outputnum'>0</span></div></td><td><input type='button' class='table_button' value='删除'' onclick='del2(this)'></td>";  
+        document.getElementById("tb2").appendChild(trObj);  
+    }
+ function add3() {  
+        var trObj = document.createElement("tr");  
+        trObj.id = new Date().getTime();  
+        trObj.innerHTML = "<td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><div class='numberoutput'>$<span class='outputnum'>0</span></div></td><td><input type='button' class='table_button' value='删除'' onclick='del3(this)'></td>";  
+        document.getElementById("tb3").appendChild(trObj);  
+    }
+     function add4() {  
+        var trObj = document.createElement("tr");  
+        trObj.id = new Date().getTime();  
+        trObj.innerHTML = "<td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><div class='numberoutput'>$<span class='outputnum'>0</span></div></td><td><input type='button' class='table_button' value='删除'' onclick='del4(this)'></td>";  
+        document.getElementById("tb4").appendChild(trObj);  
+    }
+     function add5() {  
+        var trObj = document.createElement("tr");  
+        trObj.id = new Date().getTime();  
+        trObj.innerHTML = "<td><input name='' class='numberinput' type='text'/></td><td><input name='' class='numberinput' type='text'/></td><td><div class='numberoutput'>$<span class='outputnum'>0</span></div></td><td><input type='button' class='table_button' value='删除'' onclick='del5(this)'></td>";  
+        document.getElementById("tb5").appendChild(trObj);  
+    }
+  function del1(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb1").removeChild(trObj);  
+    } 
+  function del2(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb2").removeChild(trObj);  
+    } 
+  function del3(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb3").removeChild(trObj);  
+    }
+  function del4(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb4").removeChild(trObj);  
+    } 
+  function del5(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb5").removeChild(trObj);  
+    }  
+</script>
+</body>
+</html>

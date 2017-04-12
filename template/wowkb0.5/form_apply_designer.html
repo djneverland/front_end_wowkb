@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
+  <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="/prewowkb/Tpl/index.html"><div class="nav">主页</div></a>
+      <a href="/prewowkb/Tpl/designer.html"><div class="nav">设计</div></a>
+      <a href="/prewowkb/Tpl/productsupplier.html"><div class="nav">产品</div></a>
+      <a href="/prewowkb/Tpl/service.html"><div class="nav">服务</div></a>
+      <a href="/prewowkb/Tpl/about.html"><div class="nav">关于我们</div></a>
+      <a href="/prewowkb/Tpl/begincustomize.html"><div class="nav">开始定制</div></a>
+      <a href=""><div class="nav">注册</div></a>
+      <a href=""><div id="nav_sign_signin">登陆</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>
+
+
+
+<div class="content_form">
+    <form action="" method="post" enctype="multipart/form-data">
+            <div class="form_title">申请成为WOWKB设计师</div>
+            <table id="customize">
+              <tr>
+                <td>设计领域</td>
+                <td>
+                  <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />家具设计</label> 
+                  <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />空间规划</label> 
+                  <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />室内装修</label> 
+                  <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />建筑</label> 
+                  <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />景观</label>
+                </td>
+              </tr>
+              <tr>
+                <td><span>姓名<span class="required">*</span></span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td><span>毕业院校<span class="required">*</span></span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td><span>专业<span class="required">*</span></span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td>擅长软件</td>
+                <td><label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />AutoCAD</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />REVIT</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />3DS MAX</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />2020 Design</label>
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />SketchUP</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Photoshop</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Indesign</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Illustrator</label>
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />VERY</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Redshift</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />ArchiCAD</label> 
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Vectorworks</label>
+                <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />其他</label>   
+              </td>
+              </tr>
+              <tr>
+                <td><span>其他</span></td>
+                <td><input type="text" name="" value="如果有其他擅长软件请填写" onblur="if (this.value == '') {this.value = '如果有其他擅长软件请填写';}"onfocus="if (this.value == '如果有其他擅长软件请填写') {this.value = '';}"/></td>
+              </tr>
+              <tr>
+                <td><span>服务报价<span class="required">*</span></span></td>
+                <td><input type="text" name="" value="您希望的服务价格：美元/小时" onblur="if (this.value == '') {this.value = '您希望的服务价格：美元/小时';}"onfocus="if (this.value == '您希望的服务价格：美元/小时') {this.value = '';}"//></td>
+              </tr>
+              
+              <tr>
+                <td><span>邮箱<span class="required">*</span></span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td><span>电话<span class="required">*</span></span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td><span>个人网站</span></td>
+                <td><input type="text"/></td>
+              </tr>
+              <tr>
+                <td><span>居住地址<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field input_address" value="address#1" onblur="if (this.value == '') {this.value = 'address#1';}"onfocus="if (this.value == 'address#1') {this.value = '';}"/></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="text" class="input-field input_address" value="address#2" onblur="if (this.value == '') {this.value = 'address#2';}"onfocus="if (this.value == 'address#2') {this.value = '';}"/></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><select>
+            <option value="CA">California</option>
+                  </select>
+                  <input type="text" class="short_input" value="city" onblur="if (this.value == '') {this.value = 'city';}"onfocus="if (this.value == 'city') {this.value = '';}"/>
+                  <input type="text" class="short_input" value="zip code" onblur="if (this.value == '') {this.value = 'zip code';}"onfocus="if (this.value == 'zip code') {this.value = '';}"/></td>
+              </tr>
+              
+              <tr>
+                <td colspan="2"><input class="agree_check" type="checkbox"><span><a class="agreement" href="#agreenment_window">同意我们的合作条款</a></span></td>
+              </tr>
+            </table>
+              <input class="submit_button" type="submit" value="提交"> 
+    </form>          
+</div>
+
+  <div id="agreenment_window" class="overlay">
+  <div class="popup">
+    <h2>Agreement</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

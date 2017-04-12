@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+    <div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">管理员</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../admin/admin_dashboard.html">网站状态</a>
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>认证申请</a>
+      <a class="admin_button" href="../account/designer_manage.html">权限管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
+    </div>    
+</div>
+
+  <div id="admin_main">      
+      <div id="admin_content">
+
+        <div id="applycheck_title">物料商申请</div>
+        <table id="applycheck">
+          <tr>
+            <th>申请时间</th>
+            <th>公司名称</th>
+            <th>审核状态</th>
+            <th>详细信息</th>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>Grand JK</td>
+            <td><div class="wait_check">待审核</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:49</td>
+            <td>wowkb</td>
+            <td><div class="pass_check">已通过</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+        </table>
+
+        <div id="applycheck_title">设计师申请</div>
+        <table id="applycheck">
+          <tr>
+            <th>申请时间</th>
+            <th>姓名</th>
+            <th>审核状态</th>
+            <th>详细信息</th>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>James</td>
+            <td><div class="pass_check">已通过</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>wowkb</td>
+            <td><div class="wait_check">待审核</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+        </table>
+
+        <div id="applycheck_title">施工商申请</div>
+        <table id="applycheck">
+          <tr>
+            <th>申请时间</th>
+            <th>名称</th>
+            <th>审核状态</th>
+            <th>详细信息</th>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>James</td>
+            <td><div class="pass_check">已通过</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>wowkb</td>
+            <td><div class="wait_check">待审核</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+        </table>
+
+        <div id="applycheck_title">定制服务预约</div>
+        <table id="applycheck">
+          <tr>
+            <th>预约时间</th>
+            <th>预约用户</th>
+            <th>预约状态</th>
+            <th>详细信息</th>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:42</td>
+            <td>USerA</td>
+            <td><div class="wait_check">待审核</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+          <tr>
+            <td>2017.03.12 11:49</td>
+            <td>UserB</td>
+            <td><div class="pass_check">已通过</div></td>
+            <td><a href="#">查看</a></td>
+          </tr>
+        </table>
+
+    </div>
+  </div>
+</div>
+
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>

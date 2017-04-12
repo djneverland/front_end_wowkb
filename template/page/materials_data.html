@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../page/page.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--   {%include file="$root/template/common/navbar.html"%} -->
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/products.html"><div class="nav choose">物料</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_sign_signin">登陆</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>    
+
+<div id="body">
+  <div class="wide_main">
+      <form class="material_searchbar">
+          <input id="material_search" type="text" placeholder="" required>
+          <input id="material_search_button" type="button" value="搜索">
+      </form>
+  <div class="catogory_topbar">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">品牌
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">品类
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">材质
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">款式
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">颜色
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li class="divider"></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="database_form">
+    <table class="database_material">
+      <tr>
+        <th>图片</th>
+        <th>名称</th>
+        <th>品牌</th>
+        <th>编号</th>
+        <th>品类</th>
+        <th>材质</th>
+        <th>款式</th>
+        <th>颜色</th>
+        <th>零售价格</th>
+        <th>折扣价格</th>         
+        <th>折扣比例</th>
+      </tr>
+      <tr>
+        <td><img id="material_pic" src="../../image/p1.png"></td>
+        <td>Creme Maple Glazed</td>
+        <td>JK</td>
+        <td>B-09R</td>
+        <td>Base Carbinet</td>
+        <td>Wood</td>
+        <td>A7</td>
+        <td>白色</td>
+        <td>$239.14</td>
+        <td>$114</td>
+        <td>49%</td>
+      </tr>
+      <tr>
+        <td><img id="material_pic" src="../../image/p2.png"></td>
+        <td>Creme Maple Glazed</td>
+        <td>JK</td>
+        <td>B-09R</td>
+        <td>Base Carbinet</td>
+        <td>Wood</td>
+        <td>A7</td>
+        <td>白色</td>
+        <td>$239.14</td>
+        <td>$114</td>
+        <td>49%</td>
+      </tr>
+      <tr>
+        <td><img id="material_pic" src="../../image/p3.png"></td>
+        <td>Creme Maple Glazed</td>
+        <td>JK</td>
+        <td>B-09R</td>
+        <td>Base Carbinet</td>
+        <td>Wood</td>
+        <td>A7</td>
+        <td>白色</td>
+        <td>$239.14</td>
+        <td>$114</td>
+        <td>49%</td>
+      </tr>
+    </table>
+  </div>
+
+  </div>
+</div>
+
+  
+  {%include file="$root/template/common/footer.html"%}
+  
+</body>
+</html>
+

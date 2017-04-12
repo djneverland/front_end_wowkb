@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+  <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
+  <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<!-- {%include file="$root/template/common/navbar.html"%} -->
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">优秀设计</div></a>
+      <a href="../page/products.html"><div class="nav choose">购买产品</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_sign_signin">登陆</div></a>
+  </div>
+</div>
+
+
+<div id="body_dash">
+<!--     {%include file="$root/template/common/sidebar.html"%} -->
+<div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_reddot"></div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+    </div>    
+</div>
+    
+    
+<div id="admin_main">
+          <form action="" method="post" enctype="multipart/form-data">
+            
+            <table class="upload_form">
+              <tr>
+                <td colspan="2">
+                  <div class="design_upload_title">作品展示</div>
+                </td>
+              </tr>
+              <tr>
+                <td>作品名称<span class="required">*</span></td>
+                <td><input type="text" class="input-field" name="" value=""/>
+                  </td>
+              </tr>
+              <tr>
+                <td>作品类别<span class="required">*</span></td>
+                <td>
+                  <select id="mySelect1" onchange="myFunction()">
+                    <option value="customize">家具设计</option>
+                    <option value="renew">空间规划</option>
+                    <option value="addroom">室内装修</option>
+                    <option value="renew">景观</option>
+                    <option value="addroom">建筑</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>设计图片<span class="required">*</span></td>
+                <td><input type="file" name="designpicture">
+                  <div id="type_counter">最多上传10张</div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="design_upload_title upload_blank">项目整体预算</div>
+                </td>
+              </tr>
+              <tr>
+                <td>项目成本<span class="required">*</span></td>
+                <td><input type="number" class="input-field" name="" value="" /><a title="popup" onclick="return popup()"><i class="fa fa-calculator icon_style" aria-hidden="true"> 报价计算器</i></a>
+                <div id="type_counter">只输入数字</div>
+              </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="design_upload_title upload_blank">方案总体描述</div>
+                </td>
+              </tr>
+              <tr>
+                <td>内容简介 <span class="required">*</span></td>
+                <td><textarea maxlength="250" id="status" name="status" class="textarea-field supplier_info_textarea" onkeydown='countChar("status","counter");' onkeyup='countChar("status","counter");'></textarea></br><div id="type_counter">可以输入<span id="counter">250</span>字<br/></div></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="design_upload_title upload_blank">方案详细介绍</div>
+                </td>
+              </tr>
+              <tr>
+                <td>作品风格<span class="required">*</span></td>
+                <td>
+                  <select>
+                    <option value="customize">Mid-century Modern Style</option>
+                    <option value="renew">Modern Style</option>
+                    <option value="addroom">Art Deco Style</option>
+                    <option value="renew">Minimalism Style</option>
+                    <option value="addroom">Traditional Style</option>
+                    <option value="customize">Chinese Style</option>
+                    <option value="renew">Japanese Style</option>
+                    <option value="addroom">Scandinavian Design Style</option>
+                    <option value="renew">Eclectic Style</option>
+                    <option value="addroom">Country Style</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>空间面积<span class="required">*</span></td>
+                <td>
+                  <select>
+                    <option value="customize">Smaller: < 70 sq. ft</option>
+                    <option value="renew">Small: 71 - 100 sq.ft</option>
+                    <option value="addroom">Medium: 101 - 200 sq. ft</option>
+                    <option value="renew">Large: 201 - 400 sq. ft</option>
+                    <option value="addroom">Larger: > 400 sq. ft</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>形状<span class="required">*</span></td>
+                <td>
+                  <select id="mySelect1" onchange="myFunction()">
+                    <option value="customize">正方形</option>
+                    <option value="renew">长方形</option>
+                    <option value="addroom">多边形</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>布局<span class="required">*</span></td>
+                <td>
+                  <select id="mySelect1" onchange="myFunction()">
+                    <option value="customize">一字型</option>
+                    <option value="renew">一字型带中岛</option>
+                    <option value="addroom">L型</option>
+                    <option value="renew">L型带中岛</option>
+                    <option value="addroom">U型</option>
+                    <option value="customize">U型带中岛</option>
+                    <option value="renew">G型</option>
+                    <option value="addroom">步入型</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>材质</td>
+                <td><input type="text" class="input-field" name="designsize" value="" /></td>
+              </tr>
+              <tr>
+                <td>内部处理</td>
+                <td><input type="text" class="input-field" name="designsize" value="" /></td>
+              </tr>
+              <tr>
+                <td>颜色</td>
+                <td><input type="text" class="input-field" name="designsize" value="" /></td>
+              </tr>
+              <tr>
+                <td>应用</td>
+                <td><input type="text" class="input-field" name="designsize" value="" /></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="design_upload_title upload_blank">物料关联</div>
+                </td>
+              </tr>
+              <tbody id="tb">
+              <tr>
+                <td>物料编号<span class="required">*</span></td>
+                <td id="addmaterial">
+                  <input type="text" class="input-field-short" name="" value="" />
+                  <input type="text" class="input-field-short" name="" value="" />
+                  <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 物料库搜索</i></a>
+                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div id="type_counter">输入物料编号<span class="right">输入数量</span></div>
+                </td>
+              </tr>
+            </tbody>
+            </table>
+              <span>&nbsp;</span><input class="submit_button button_left" type="submit" value="提交"/>
+          </form>
+      </div>
+  </div>
+
+<!-- {%include file="$root/template/common/footer.html"%} -->
+<div id="bottombar">
+    <div class="bottom_content">
+      <div class="bottom_link">
+        <div class="bottom_link_line">
+          <ul class="bottom_list">
+            <li>Company</li>
+            <li>Help</li>
+            <li>Media</li>
+          </ul>
+        </div>
+
+        <div class="bottom_blank"></div>
+
+        <div class="bottom_link_line">
+          <ul class="bottom_list">
+            <li>Cooperation</li>
+            <li>Term of Service</li>
+            <li>Privacy and Security</li>
+          </ul>
+        </div>
+
+        <div class="bottom_blank"></div>
+
+        <div class="bottom_link_line">
+          <ul class="bottom_list">
+            <li>Hiring</li>
+            <li>App</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom_share"></div>
+    </div>
+</div>
+<script language="javascript"> 
+function countChar(textareaName,spanName) 
+{ 
+document.getElementById(spanName).innerHTML = 250 - document.getElementById(textareaName).value.length; 
+} 
+</script>
+<script type="text/javascript">
+function popup()
+{
+        window.open("../common/caculator.html", "", "toolbar=no,height=800,width=740");
+        return false;
+}
+function popmaterial()
+{
+        window.open("search_material.html", "", "toolbar=no");
+        return false;
+}
+</script>
+
+<script type="text/javascript">
+  $("#addMaterialButton").click(function() {
+    var trObj = document.createElement("tr");  
+    trObj.id = new Date().getTime();  
+    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";  
+    $("#tb").append(trObj);  
+  });
+  function del(obj) {  
+        var trId = obj.parentNode.parentNode.id;  
+        var trObj = document.getElementById(trId);  
+        document.getElementById("tb").removeChild(trObj);  
+    } 
+</script>
+
+
+ 
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../account/account.css">
+  <script src="../../js/product.js"></script>
+</head>
+<body>
+<!-- {%include file="$root/template/common/navbar.html"%} -->
+
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/materials.html"><div class="nav choose">物料</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_sign_signin">登陆</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>
+
+<div id="body_dash">
+<!--   {%include file="$root/template/common/sidebar.html"%} -->
+<div id="designer" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sam</div>
+    <div id="userTitle">设计师</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../account/designer_dashboard.html"><div id="sidebar_reddot"></div>定制项目</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
+      <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
+      <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+    </div>    
+</div>
+  <div id="admin_main">
+    <div id="admin_label">
+      <a id="label_choose">正在进行的定制</a>
+      <div id="label_blank"></div>
+      <a id="label_unchoose" href="designer_history.html">已完成的定制</a>
+    </div>
+
+    <div id="admin_content">
+        <div class="admin_project">
+          <div id="dashboard_message">20</div>
+          <div class="admin_project_pic">
+            <img class="admin_project_pic"  src="../../image/t1.jpg">
+          </div>
+          <div class="admin_project_intro">
+            <div class="admin_project_title">美式厨房设计</div>
+            <div class="admin_project_designer">用户：XXX</div>
+            <div class="admin_project_status">预估报价：$9999</div>
+            <div class="admin_project_update">最后更新：1天前</div>
+          </div>
+        </div>
+        <div class="admin_project">
+          <div id="dashboard_message">20</div>
+          <div class="admin_project_pic">
+            <img class="admin_project_pic"  src="../../image/t2.jpg">
+          </div>
+          <div class="admin_project_intro">
+            <div class="admin_project_title">美式厨房设计</div>
+            <div class="admin_project_designer">用户：XXX</div>
+            <div class="admin_project_status">预估报价：$8888</div>
+            <div class="admin_project_update">最后更新：1天前</div>
+          </div>
+        </div>
+        <div class="admin_project">
+          <div id="dashboard_message">20</div>
+          <div class="admin_project_pic">
+            <img class="admin_project_pic" src="../../image/t3.jpg">
+          </div>
+          <div class="admin_project_intro">
+            <div class="admin_project_title">美式厨房设计</div>
+            <div class="admin_project_designer">用户：xxx</div>
+            <div class="admin_project_status">预估报价：$7777</div>
+            <div class="admin_project_update">最后更新：1天前</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%include file="$root/template/common/footer.html"%}
+
+  </body>
+</html>

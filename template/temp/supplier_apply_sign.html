@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+<div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">物料商</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">   
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a> 
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../admin/admin_manage.html"><div id="sidebar_message">12</div>订单管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">销售渠道</a>
+      <a class="admin_button" href="../account/designer_manage.html">申请认证</a>
+      <a class="admin_button" href="../account/designer_manage.html">企业信息</a>
+
+    </div>    
+</div>
+
+  <div id="admin_main">     
+    <div id="admin_content">
+        <div class="application">
+          <a href="#"><div class="apply_step">上一步</div></a>
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="sub_form_title form_title_sign">本人证实已填写信息真实无误，用于WOWKB评估卖家身份，并将我公司添加入卖家列表中。通过以下签名，本人确认已完整阅读WOWKB卖家合作协议中的全部内容，并自愿接受全部条款。
+            </div>
+            <table class="apply_form">
+              <tr>
+                <td colspan＝"2"></td>
+              </tr>
+              <tr>
+                <td><span>申请人签名<span class="required">*</span></span><input type="text" class="input-field input_sign" name="size" value="" /></td>
+                <td><span>签署日期<span class="required">*</span></span><input type="date" class="input_sign" name="user_date" /></td>
+              </tr>
+              
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+
+            </table>
+            
+
+              <input type="submit" value="完成" class="apply_button"/>
+
+          </form>
+        </div>
+
+      
+       
+    </div>
+  </div>
+</div>
+
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>

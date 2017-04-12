@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+<div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">物料商</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">   
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>系统消息</a> 
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../admin/admin_manage.html">订单管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">销售渠道</a>
+      <a class="admin_button" href="../account/designer_manage.html">申请认证</a>
+      <a class="admin_button" href="../account/designer_manage.html">企业信息</a>
+
+    </div>    
+</div>
+
+  <div id="admin_main">     
+    <div id="admin_content">
+        <div class="application">
+          <a href="#"><div class="apply_step">上一步</div></a>
+          <form action="" method="post" enctype="multipart/form-data">
+            <div class="sub_form_title">银行账户信息
+              <div class="sub_form_gapline"></div>
+            </div>
+            <table class="apply_form">
+              <tr>
+                <td><span>银行名称 Bank Name<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field" name="title" value="" /></td>
+              </tr>
+              <tr>
+                <td><span>银行地址 Bank Address<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field input_address" name="size" value="address#1" onblur="if (this.value == '') {this.value = 'address#1';}"onfocus="if (this.value == 'address#1') {this.value = '';}"/></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="text" class="input-field input_address" name="size" value="address#2" onblur="if (this.value == '') {this.value = 'address#2';}"onfocus="if (this.value == 'address#2') {this.value = '';}"/></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <select>
+                    <option value="">State</option>
+                    <option value="saab">Az</option>
+                    <option value="mercedes">CA</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                  <input type="text" class="short_input" name="size" value="city" onblur="if (this.value == '') {this.value = 'city';}"onfocus="if (this.value == 'city') {this.value = '';}"/>
+                  <input type="text" class="short_input" name="size" value="zip code" onblur="if (this.value == '') {this.value = 'zip code';}"onfocus="if (this.value == 'zip code') {this.value = '';}"/>
+                </td>
+              </tr>
+              <tr>
+                <td><span>银行电话 Bank Phone#<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field" name="designer" value="" /></td>
+              </tr>
+              <tr>
+                <td><span>账户名称 Account Name<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field" name="final_sum" value="" /></td>
+              </tr>
+              <tr>
+                <td><span>编号 ABA/Routing#<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field" name="final_sum" value="" /></td>
+              </tr>
+              <tr>
+                <td><span>账号 Account Number<span class="required">*</span></span></td>
+                <td><input type="text" class="input-field" name="final_sum" value="" /></td>
+              </tr>
+            </table>
+
+              <input type="submit" value="下一步" class="apply_button"/>
+
+          </form>
+        </div>
+
+      
+       
+    </div>
+  </div>
+</div>
+
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>

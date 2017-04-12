@@ -1,0 +1,158 @@
+.main_content{
+	width: 80%;
+	min-width: 740px;
+	border: 0px solid green;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 51px;
+	background-color: #fff;
+}
+.top_intro{
+	padding: 40px;
+	font-size: 14px;
+}
+.each_module{
+	width: 100%;
+	border: 0px solid blue;
+}
+.module_title{
+	height: 40px;
+	background-color: #ffda72;
+	padding-left: 40px;
+	line-height: 40px;
+}
+.title_button{
+	border: 1px solid #54554f;
+	display: inline-block;
+	float: right;
+	color: #54554f;
+	height: 28px;
+	font-size: 12px;
+	line-height: 24px;
+	width: 52px;
+	text-align: center;
+	margin-top: 7px;
+	border-radius: 4px;
+	margin-right: 20px;
+	cursor: pointer;
+	background-color:#ffda72; 
+}
+.table_button{
+	font-size: 14px;
+	padding-right: 4px;
+	border: none;
+	background-color: #fff;
+	color: #9a9b8f;
+	cursor: pointer;
+}
+.total_button{
+	font-size: 14px;
+	padding-right: 4px;
+	border: none;
+	background-color:  #54554f;
+	color: #fff;
+	cursor: pointer;
+	width: 100px;
+	height: 36px;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+.table_button:hover{
+	color: orange;
+}
+.module_content{
+	width: 100%;
+	border: 0px solid green;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.module_sub{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	border: 0px solid lightblue;
+}
+.sub_right{
+	border-left:1px solid #d5d5d5;
+}
+.caculator_table{
+	border: 0px solid red;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.caculator_table th{
+/*	border-bottom: 1px solid #d5d5d5;*/
+	font-size: 14px;
+	color: #383838;
+	padding-bottom: 20px;
+}
+.caculator_table tr{
+	border: 1px solid green;
+}
+.caculator_table tr:nth-child(even) {
+	border: 1px solid blue;
+}
+.caculator_table tr td{
+	text-align: center;
+	height: 40px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: 14px;
+	color: #aaaaaa;
+}
+.caculator_table tr .table_left{
+/*	text-align: left;*/
+/*	padding-left: 40px;*/
+	min-width: 100px;
+	color: #383838;
+/*	background-color: lightblue;*/
+}
+.caculator_table tr .table_total{
+	width: 60px;
+	border: 0px solid red;
+	line-height: 36px;
+}
+.caculator_table tr .table_white{
+	border: 0px solid red;
+	color: #fff;
+	background-color: #fff;
+	font-size: 14px;
+}
+.caculator_table .numberinput{
+	background-color: #ebebeb;
+	border: none;
+	height: 20px;
+}
+.numberoutput{
+	background-color: #ebebeb;
+	border: none;
+	height: 22px;
+	width: 128px;
+	font-size: 12px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	color: #aaaaaa;
+	padding-left: 4px;
+}
+.outputnum{
+	margin-left: 6px;
+	color: #383838;
+}
+.totaloutput{
+	width: 200px;
+	height: 36px;
+	font-size: 16px;
+	line-height: 36px;
+}
+.caculator_table .numberinput:focus{
+	outline: none;
+	border: none;
+	box-shadow: none;
+	background-color: #d5d5d5;
+}
+select:focus{
+	outline: none;
+}

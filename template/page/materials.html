@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../page/page.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--   {%include file="$root/template/common/navbar.html"%} -->
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/products.html"><div class="nav choose">物料</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_sign_signin">登陆</div></a>
+     <!--  <a href="#"><div class="nav">购物车(0)</div></a> -->
+  </div>
+  <div id="nav_bg"></div>
+</div> 
+
+<div id="showArea">
+  <div id="search_slogan">发现最好的产品</div>
+    <div id="showBox">
+        <form>
+            <input id="search_input" type="text" placeholder="" required>
+            <input id="search_button" type="button" value="搜索">
+        </form>
+    </div>
+    <img id="showArea_pic" src="../../image/ad2.png">
+</div>
+
+<div id="body">
+  <div id="container">
+    <div id="sidebar">
+
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                  <div class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">按类别选择
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <ul id="catogory_list">
+                      <li class="secondList">全部规格</li>
+                      <li>厨房</li>
+                      <li>浴室</li>
+                      <li>卫生间</li>
+                      <li>卧室</li>
+                      <li>客厅</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                  <div class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">按品牌选择
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <ul id="catogory_list">
+                      <li class="secondList">全部规格</li>
+                      <li>Branks</li>
+                      <li>ikea</li>
+                      <li>pinpai</li>
+                      <li>wowkb</li>
+                      <li>JK</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                  <div class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">按规格选择
+                      </a>
+                  </div>
+              </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <ul id="catogory_list">
+                  <li class="secondList">全部规格</li>
+                  <li>10*10</li>
+                  <li>8*8</li>
+                  <li>10*16</li>
+                  <li>8*12</li>
+                  <li>18*20</li>
+              </ul>
+          </div>
+          </div>
+      </div>
+      
+    </div><!-- sidebar -->
+    
+    <div id="mainContent">
+
+    <!--   <div id="search_result">共有2999个带有“XX"的产品</div> -->
+      <div class="select_order">
+        <select>
+            <option>选择排序</option>
+            <option>按热度</option>
+            <option>按购买量</option>
+            <option>按价格从低到高</option>
+            <option>按价格从高到低</option>
+        </select>
+      </div>
+
+      <div class="mainArea">         
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <a href="product_detail.html">
+                  <img src="../../image/JK/A7 - Creme Maple Glazed-min.jpg"></a>
+                </div>
+                <a href="product_detail.html">
+                <div class="productIntro">
+                  <div class="product_name">A7 - Creme Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div></a>
+              </div>
+       
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/CO66 - Cinnamon Maple Glazed-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">CO66 - Cinnamon Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/H9 - Pearl Maple Glazed-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">H9 - Pearl Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+   
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/J5 - Mahogany Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">J5 - Mahogany Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+   
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/K3 - Greige Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">K3 - Greige Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+       
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/K8 - Espresso Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">K8 - Espresso Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/K10 - Mocha Maple Glazed-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">K10 - Mocha Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+    
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/M01 - Chocolate Maple Glazed-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">M01 - Chocolate Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+      
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/S1 - Java Coffee Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">S1 - Java Coffee Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>  
+
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/S2 - Almond Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">S2 - Almond Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+    
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/S8 - White Maple-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">S8 - White Maple</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div>
+      
+              <div class="single">
+                <div class="productPic">
+                  <button id="heart">收藏</button>
+                  <img src="../../image/JK/A7 - Creme Maple Glazed-min.jpg">
+                </div>
+                <div class="productIntro">
+                  <div class="product_name">A7 - Creme Maple Glazed</div>
+                  <div class="product_brand">By JK</div>
+                </div>
+              </div> 
+         </div><!-- mainArea -->
+   <!--       <div id="show_more">显示更多</div> -->
+    </div> <!-- mainContent -->
+    
+  </div> <!-- container -->
+</div>
+
+  
+  {%include file="$root/template/common/footer.html"%}
+  
+</body>
+</html>
+

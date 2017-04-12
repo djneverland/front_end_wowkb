@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wow Kitchen & Bath</title>
+<link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+<link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+<div id="navbar">
+  <div id="nav_logo">
+      <img id="nav_logo_pic" src="../../image/logo.png">
+  </div>
+  
+  <div id="nav_link1">
+      <a href="designs.html"><div class="nav">设计</div></a>
+      <a href="../page/products.html"><div class="nav">产品</div></a>
+      <a href="../page/products.html"><div class="nav">物料录入</div></a>
+      <a href="../page/products.html"><div class="nav choose">作品录入</div></a>
+      <a href="#"><div class="nav">注册</div></a>
+      <a href="#"><div id="nav_signup">登陆</div></a>
+      <a href="#"><div class="nav">购物车(0)</div></a>
+  </div>
+  <div id="nav_bg"></div>
+</div>
+
+<div id="body_dash">
+  <div id="admin" class="admin_sidebar">
+      <div id="userPic">
+          <img src="../../image/head.png">
+      </div>
+      <div id="userName">Sarah</div>
+      <div id="userTitle">管理员</div>
+
+      <div id="admin_sidebar_gapline"></div>
+
+      <div id="admin_menu">
+          <a class="admin_button choose" href="../admin/admin_dashboard.html">网站状态</a>
+          <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+          <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>认证申请</a>
+          <a class="admin_button" href="../account/designer_manage.html">权限管理</a>
+          <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
+      </div>    
+  </div>
+    
+    <div id="admin_main">
+      <div class="productLink topspace">  
+        <a href="/account/admin.php?act=index">返回</a>
+      </div>
+  
+
+    <form  method="post" action="/account/admin.php?act=single_modify">
+      <div id="table_flow">
+      <table id="multiupload">
+        <tr>
+          <th><input id="toggle" type="checkbox"></th>
+          <th>图片</th>
+          <th>系统编号</th>
+          <th>品牌</th>
+          <th>编号</th>
+          <th>名称</th>
+          <th>品类</th>
+          <th>材质</th>
+          <th>款式</th>
+          <th>颜色</th>
+          <th>宽高深</th>
+          <th>重量</th>
+          <th>内容描述</th>
+          <th>零售价格</th>
+          <th>折扣价格</th>
+          <th>折扣比例</th>
+          <th>库存</th>
+          <th>单位</th>
+          <th>文件格式</th>
+          <th>文件类型</th>
+          <th>文件大小</th>
+        </tr>
+        <tr>
+          <td><input id="toggle" type="checkbox"></td>
+          <td><img  id="pic_path" class="product_pic" src="{%$res['pic_path']|default:''%}"></td>
+          <td>{%$res['item_id']|default:''%}</td>
+          <input type="hidden" name="item_id" value="{%$res['item_id']|default:''%}">
+          <td><input type="text" name="brand" value="{%$res['brand']|default:''%}"></td>
+          <td><input type="text" name="projno_name" value="{%$res['projno_name']|default:''%}"></td>
+          <td>Creme Maple Glazed</td>
+          <td>Base Carbinet</td>
+          <td>Wood</td>
+          <td>A7</td>
+          <td>白色</td>
+          <td>w9 h34-1/2 d24</td>
+          <td>37</td>
+          <td><input type="text" name="price" value="{%$res['price']|default:''%}"></td>
+          <td><input type="text" name="description" value="{%$res['description']|default:''%}"></td>
+          <td>$114</td>
+          <td>49%</td>
+          <td>100</td>
+          <td>Pieces</td>   
+          <td>{%$res['file_format']|default:''%}</td>
+          <td>{%$res['file_type']|default:''%}</td>
+          <td>{%$res['file_size']|default:''%} M</td>
+        </tr> 
+      </table>
+    </div>
+      <input class="multi_preview_submit" type="submit" name="submit" value="保存"> 
+</form>
+ </div>
+
+
+      </div>
+
+  </div>
+
+
+</div>
+
+
+  </body>
+</html>

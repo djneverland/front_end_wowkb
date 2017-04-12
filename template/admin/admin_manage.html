@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+</head>
+<body>
+{%include file="$root/template/common/navbar.html"%}
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+    <div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">管理员</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../admin/admin_dashboard.html">网站状态</a>
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>认证申请</a>
+      <a class="admin_button" href="../account/designer_manage.html">权限管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
+    </div>    
+</div>
+
+  <div id="admin_main">
+      
+      <div id="admin_content">
+        <a id="admin_edit_button" href="admin_supload.html">单个上传</a>
+        <a id="admin_edit_button" href="admin_mupload.html">批量上传</a>
+        <div class="dropdown">
+          <span>批量编辑</span>
+          <div class="dropdown-content">
+            <a id="dropdown_list" href="#"><p>修改选中文件名称</p></a>
+            <a id="dropdown_list" href="#"><p>修改选中文件品牌</p></a>
+            <a id="dropdown_list" href="#"><p>删除选中文件</p></a>
+          </div>
+        </div>
+        <a id="admin_edit_button" href="admin_mupload.html">管理素材</a>
+ <!--        <form id="search">
+          <input id="admin_search" type="text" name="productname" value="产品名称/项目编号检索">
+        </form> -->
+
+      <table id="productList">
+        <tr>
+          <th><input id="toggle" type="checkbox"></th>
+          <th>图片</th>
+          <th>名称</th>
+          <th>品牌</th>
+          <th>编号</th>
+          <th>品类</th>
+          <th>零售价格</th>
+          <th>折扣价格</th>         
+          <th>折扣比例</th>
+          <th></th>
+        </tr>
+        <tr >
+          <td><input id="toggle" type="checkbox"></td>
+          <td><img id="product_pic" src="../../image/p1.png"></td>
+          <td><div class="dropdown_table">
+              <span>Creme Maple Glazed</span>
+              <div class="dropdown_table_content">
+                  <div>
+                    <div class="dropdown_content_row">系统编号：99999213932
+                    <div class="dropdown_content_each">库存:100</div>
+                    <div class="dropdown_content_each">单位：Pieces</div>
+                    </div>
+                    <div class="dropdown_content_row">
+                    材质：Wood
+                    <div class="dropdown_content_each">款式：A7</div>
+                    <div class="dropdown_content_each">颜色：白色</div>
+                    </div>
+                    <div class="dropdown_content_row">
+                    宽高深：W9 H34-1/2 D24
+                    <div class="dropdown_content_each">重量：37lb</div>                        
+                    </div>
+                    <div class="dropdown_content_row">
+                    内容描述：</br>KNEE DRAWER;21"DEEP;1 DRAWER;BOX:7-1/2"H ON A7,M01,K10,K8,K3;BOX:8-1/2"H ON CO66,J5,S1,S8
+                    </div>
+                    <div class="dropdown_content_row">
+                      文件格式： jpg
+                      <div class="dropdown_content_each">文件类型：图片</div>
+                      <div class="dropdown_content_each">文件大小：2M</div>
+                    </div> 
+                  </div>
+              </div>
+          </div></td>
+          <td>JK</td>
+          <td>B-09R</td>
+          <td>Base Carbinet</td>
+          <td>$239.14</td>
+          <td>$114</td>
+          <td>49%</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            </br>
+            <a id="delete" href="#" onclick="return del(this)">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input id="toggle" type="checkbox"></td>
+          <td><img id="product_pic" src="../../image/p2.png"></td>
+          <td><div class="dropdown_table">
+              <span>Creme Maple Glazed</span>
+              <div class="dropdown_table_content">
+                  <div>
+                    <div class="dropdown_content_row">系统编号：99999213932
+                      <div class="dropdown_content_each">库存:100</div>
+                      <div class="dropdown_content_each">单位：Pieces</div>
+                    </div>
+                    <div class="dropdown_content_row">
+                      材质：Wood
+                      <div class="dropdown_content_each">款式：A7</div>
+                      <div class="dropdown_content_each">颜色：白色</div>
+                    </div>
+                    <div class="dropdown_content_row">
+                      宽高深：W9 H34-1/2 D24
+                      <div class="dropdown_content_each">重量：37lb</div>                        
+                    </div>
+                    <div class="dropdown_content_row">
+                      内容描述：</br>KNEE DRAWER;21"DEEP;1 DRAWER;BOX:7-1/2"H ON A7,M01,K10,K8,K3;BOX:8-1/2"H ON CO66,J5,S1,S8
+                    </div>
+                    <div class="dropdown_content_row">
+                      文件格式： jpg
+                      <div class="dropdown_content_each">文件类型：图片</div>
+                      <div class="dropdown_content_each">文件大小：2M</div>
+                    </div> 
+                  </div>
+              </div>
+          </div></td>
+          <td>JK</td>
+          <td>B-09R</td>
+          <td>Base Carbinet</td>
+          <td>$239.14</td>
+          <td>$114</td>
+          <td>49%</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            </br>
+            <a id="delete" href="#" onclick="return del(this)">删除</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{%include file="$root/template/common/footer.html"%}
+  </body>
+</html>
