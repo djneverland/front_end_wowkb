@@ -19,9 +19,9 @@
 .right_header{
   height: 100vh;
   position: absolute;
-  width: 432px;
+  width: 400px;
   background-color: #ebebeb;
-  background-color: rgba(235, 235, 235, .7);
+  background-color: rgba(255, 255, 255, .7);
   border: 0px solid red;
   display: inline-block;
   vertical-align: top;
@@ -38,7 +38,7 @@
   border: 0px solid red;
   position: absolute;
   font-size: 0;
-  right:432px;
+  right:400px;
   top:52px;
   z-index: 200;
 }
@@ -153,15 +153,6 @@
   border: 0px solid red;
   height: 100vh;
 }
-.bottom_box{
-  width: 100%;
-  height: 120px;
-  background-color: rgba(1,1,1,1);
-  position: absolute;
-  z-index: 99;
-  left: 0;
-  bottom: 0;
-}
 #header_show_title{
   font-size: 22px;
   color: #fff;
@@ -272,10 +263,10 @@
   width: 20px;
 }
 .design_main_content{
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid red;
+  border: 0px solid red;
   margin-top: 20px;
   font-size: 14px;
 }
@@ -294,18 +285,59 @@
   margin: 20px;
 }
 .box_content{
-  width: 100%;
-  height: 90px;
-  background-color: rgba(1,1,1,1);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   z-index: 99;
   left: 0;
-  bottom: 0;
+  bottom: 14vh;
+  border: 0px solid red;
   font-size: 14px;
   color: #fff;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+.each_share{
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+  line-height: 42px;
+  text-align: center;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.2);
+}
+.top_share_button{
+  border: 0px solid red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.facebook{
+  background-color:#3b5998;
+}
+.twitter{
+  background-color: #00aced;
+}
+.insta{
+    background-color: #ecce88;
+}
+.tumblr{
+    background-color: #283851
+}
+.wechat{
+  background-color: #7bb32e;
+}
+.share_button{
+  background-color: #ea7c00;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 5px 5px 5px 0 rgba(0,0,0,.2);
 }
 .design_sf{
   font-size: 14px;
@@ -331,36 +363,13 @@
   font-size: 14px;
   color: #383838;
   margin-top: 80px;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
-}
-.design_intro_detail{
-  border-top: 1px solid #d5d5d5;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  padding-top: 40px;
-}
-.design_detail_image{
-  margin-left: auto;
-  margin-right: auto;
-  width: 10%;
-}
-.design_intro_detail h5{
-  color: #e5802d;
-  text-align: center;
-}
-.design_intro_detail p{
-  font-size: 14px;
-  color: #383838;
-  margin-top: 20px;
   line-height: 1.6;
 }
 .material_content{
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   border: 0px solid #d5d5d5;
@@ -382,10 +391,6 @@
   padding: 20px;
   color:#7a7a7a;
 }
-.material_content h5{
-  color: #353535;
-  font-size: 16px;
-}
 #design_material_list .material_content table tr td h5{
   font-size: 14px;
 }
@@ -393,6 +398,35 @@
   color: #fca416;
   float: right;
   font-size: 14px;
+}
+.each_relate_material{
+  width: 160px;
+  border:1px solid red;
+  display: inline-block;
+  vertical-align: top;
+  margin: 8px;
+}
+.related_design_content{
+  margin-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid red;
+  text-align: center;
+}
+.each_relate_design{
+  width: 180px;
+  display: inline-block;
+  vertical-align: top;
+  margin:8px;
+}
+.each_relate_design img{
+  width: 180px;
+  height: 125px;
+}
+.each_relate_intro{
+  font-size: 14px;
+  color: #383838;
+  margin-top: 4px;
 }
 #basic_info{
 
