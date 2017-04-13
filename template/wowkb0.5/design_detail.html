@@ -38,14 +38,17 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
             <div class="box_content">
-                <div class="top_share_button">
-                    <div class="each_share facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                    <div class="each_share twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                    <div class="each_share insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                    <div class="each_share tumblr"><i class="fa fa-tumblr" aria-hidden="true"></i></div>
-                    <div class="each_share wechat"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+                <div id="top_share_button" class="show">
+                    <div class="each_share" id="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="each_share" id="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="each_share" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                    <div class="each_share" id="tumblr"><i class="fa fa-tumblr" aria-hidden="true"></i></div>
+                    <div class="each_share" id="wechat"><i class="fa fa-weixin" aria-hidden="true"></i></div>
                 </div>
-                <div class="share_button"><i class="fa fa-share-alt" aria-hidden="true"></i> 分享</div>
+                <div id="share_button">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i> 分享
+                    <a href="#"><span></span></a>
+                </div>
             </div>
             <!-- Wrapper for slides -->
             <div class="carousel-inner header_box" role="listbox">
@@ -85,10 +88,11 @@
     </div><!-- header -->
 
     <!-- 侧边栏按钮 -->
-    <div class="right_page_button_hide" id="right_page_button">
+    <div class="right_page_button" id="right_page_button">
         <a href="#" onclick="designer()" class="inline">
-            <div class="designer_button" id="button_basic">
-                <img  class="design_designer" src="../../image/designers/james.png">James
+            <div class="button" id="button_designer">
+                <img class="design_designer" src="../../image/designers/james.png">
+                James
             </div>
         </a>
 <!--         <a href="#" onclick="basic()" class="inline">
@@ -109,20 +113,20 @@
             </div>
         </a>
 
-        <a href="#" onclick="relate()" class="inline">
-            <div class="button" id="button_product">
+        <a href="#" onclick="relate_material()" class="inline">
+            <div class="button" id="button_relate_material">
                 <i class="fa fa-tags" aria-hidden="true"></i></br>Related Material
             </div>
         </a>
 
-        <a href="#" onclick="relate()" class="inline">
-            <div class="button" id="button_product">
+        <a href="#" onclick="relate_works()" class="inline">
+            <div class="button" id="button_relate_works">
                 <i class="fa fa-tags" aria-hidden="true"></i></br>Related Works
             </div>
         </a>
 
-        <a href="#" onclick="start()" class="inline">
-            <div class="button" id="button_product">
+        <a href="#" class="inline">
+            <div class="button" id="button_start_customize">
                 <i class="fa fa-tags" aria-hidden="true"></i></br>Start Customize
             </div>
         </a>
@@ -133,7 +137,7 @@
 
 
         <!-- 设计师 -->
-        <div id="designer_intro">
+        <div id="designer">
             <div class="design_project_designer">
                 <img id="design_project_designer_head" src="../../image/designers/james.png">
                 <div class="design_project_designer_intro">
@@ -251,7 +255,7 @@
         </div>
 
 <!-- 相关物料 -->
-        <div id="design_material   _intro">
+        <div id="relate_material">
             <div class="material_content">
                 <h4>Related Material</h4>
                 <div class="each_relate_material">
@@ -290,7 +294,7 @@
         </div><!-- design_material_intro -->
 
         <!-- 相关作品 -->
-        <div id="design_relate_design">
+        <div id="relate_works">
             <div class="related_design_content">
                 <div class="each_relate_design">
                     <img src="../../image/customize/A7/design.jpg">
@@ -330,112 +334,157 @@
     </div><!-- right_header -->
 </div><!-- design_detail_body -->
 <script type="text/javascript">
-    var page_basic = document.getElementById("basic_info");
+    /*
+    $("#myCarousel").width($( document ).width() - 84);
+    $( window ).resize(function() {
+        $( "#myCarousel" ).width($( document ).width() - 84);
+    });
+    */
+
+    var page_designer = document.getElementById("designer");
     var page_intro = document.getElementById("design_description");
     var page_list = document.getElementById("design_material_list");
-    var page_product = document.getElementById("design_material_intro");
+    var page_relate_material = document.getElementById("relate_material");
+    var page_relate_works = document.getElementById("relate_works");
 
-    var right_page_button = document.getElementById("right_page_button");
     var right_header = document.getElementById("right_header");
 
-    var button_basic = document.getElementById("button_basic");
+    var button_designer = document.getElementById("button_designer");
     var button_intro = document.getElementById("button_intro");
     var button_list = document.getElementById("button_list");
-    var button_product = document.getElementById("button_product");
+    var button_relate_material = document.getElementById("button_relate_material");
+    var button_relate_works = document.getElementById("button_relate_works");
 
-    function basic(){
-        if($("#right_page_button").hasClass("right_page_button") && $("#button_basic").hasClass("choose_button")) {
+    function designer(){
+        if($("#button_designer").hasClass("choose_button")) {
             hide();
         } else {
             show();
+
+            button_designer.className = "choose_button";
+            button_intro.className = "button";
+            button_list.className = "button";
+            button_relate_material.className = "button";
+            button_relate_works.className = "button";
         }
 
-        button_basic.className = "choose_button";
-        button_intro.className = "button";
-        button_list.className = "button";
-        button_product.className = "button";
-
-        page_basic.style.display = "block";
+        page_designer.style.display = "block";
         page_intro.style.display = "none";
         page_list.style.display = "none";
-        page_product.style.display = "none";
-
+        page_relate_material.style.display = "none";
+        page_relate_works.style.display = "none";
     }
 
     function intro(){
-        if($("#right_page_button").hasClass("right_page_button") && $("#button_intro").hasClass("choose_button")) {
+        if($("#button_intro").hasClass("choose_button")) {
             hide();
         } else {
             show();
+
+            button_designer.className = "button";
+            button_intro.className = "choose_button";
+            button_list.className = "button";
+            button_relate_material.className = "button";
+            button_relate_works.className = "button";
         }
 
-        button_intro.className = "choose_button";
-        button_basic.className =  "button";
-        button_list.className = "button";
-        button_product.className = "button";
-
+        page_designer.style.display = "none";
         page_intro.style.display = "block";
-        page_basic.style.display = "none";
         page_list.style.display = "none";
-        page_product.style.display = "none";
-
+        page_relate_material.style.display = "none";
+        page_relate_works.style.display = "none";
     }
 
     function list(){
-        if($("#right_page_button").hasClass("right_page_button") && $("#button_list").hasClass("choose_button")) {
+        if($("#button_list").hasClass("choose_button")) {
             hide();
         } else {
             show();
+
+            button_designer.className = "button";
+            button_intro.className = "button";
+            button_list.className = "choose_button";
+            button_relate_material.className = "button";
+            button_relate_works.className = "button";
         }
 
-        button_list.className = "choose_button";
-        button_basic.className = "button";
-        button_intro.className = "button";
-        button_product.className = "button";
-
-        page_list.style.display = "block";
-        page_basic.style.display = "none";
+        page_designer.style.display = "none";
         page_intro.style.display = "none";
-        page_product.style.display = "none";
+        page_list.style.display = "block";
+        page_relate_material.style.display = "none";
+        page_relate_works.style.display = "none";
+    }
+
+    function relate_material() {
+        if($("#button_relate_material").hasClass("choose_button")) {
+            hide();
+        } else {
+            show();
+
+            button_designer.className = "button";
+            button_intro.className = "button";
+            button_list.className = "button";
+            button_relate_material.className = "choose_button";
+            button_relate_works.className = "button";
+        }
+
+        page_designer.style.display = "none";
+        page_intro.style.display = "none";
+        page_list.style.display = "none";
+        page_relate_material.style.display = "block";
+        page_relate_works.style.display = "none";
 
     }
 
-    function product(){
-        if($("#right_page_button").hasClass("right_page_button") && $("#button_product").hasClass("choose_button")) {
-
+    function relate_works() {
+        if($("#button_relate_works").hasClass("choose_button")) {
             hide();
         } else {
             show();
 
+            button_designer.className = "button";
+            button_intro.className = "button";
+            button_list.className = "button";
+            button_relate_material.className = "button";
+            button_relate_works.className = "choose_button";
         }
 
-        button_product.className = "choose_button";
-        button_basic.className = "button";
-        button_intro.className = "button";
-        button_list.className = "button";
-
-        page_product.style.display = "block";
-        page_basic.style.display = "none";
+        page_designer.style.display = "none";
         page_intro.style.display = "none";
         page_list.style.display = "none";
-
+        page_relate_material.style.display = "none";
+        page_relate_works.style.display = "block";
     }
 
     $("#header").click(function () {
         hide();
     });
 
+    $("#share_button").click(function () {
+        if($("#top_share_button").hasClass( "show" )) {
+            $("#top_share_button").fadeOut("slow", function () {
+                $("#top_share_button").hide();
+                $("#top_share_button").removeClass("show").addClass("hide");
+            });
+        } else {
+            $("#top_share_button").fadeIn("slow", function () {
+                $("#top_share_button").removeClass("hide").addClass("show");
+            });
+        }
+    });
+
     function show() {
-        right_page_button.className = "right_page_button";
         right_header.className = "right_header";
-        $('#right_page_button').animate({right: '400px'});
-        $('#right_header').animate({right: '0px'});
+        $('#right_header').animate({right: '69px'});
     }
 
     function hide() {
-        $('#right_page_button').animate({right: '0px'});
         $('#right_header').animate({right: '-600px'});
-        right_page_button.className = "right_page_button_hide";
+        button_designer.className = "button";
+        button_intro.className = "button";
+        button_list.className = "button";
+        button_relate_material.className = "button";
+        button_relate_works.className = "button";
         right_header.className = "right_header_hide";
     }
 </script>
