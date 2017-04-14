@@ -52,7 +52,7 @@
   		font-family: 'mixolydian Light';
   		src: url('webfont.eot'); /* IE9 Compat Modes */
   		src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('../font/mixolydian titling ul.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../font/mixolydiantitlingul.ttf')  format('truetype'), /* Safari, Android, iOS */
         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 body{
@@ -60,7 +60,7 @@ body{
   position: relative;
   width: 100%;
   background-color: #ebebeb !important;
-  font-family:'Hanyi','Hiragino Sans GB w3',Arial,Helvetica,sans-serif,"宋体";
+  font-family:Arial,Helvetica,sans-serif,"宋体";
 }
 img{
   display: block;

@@ -31,7 +31,7 @@
   display: inline-block;
   vertical-align: top;
   overflow-y:scroll;
-  right: 0;
+  right: 84px;
   z-index: 100;
 }
 .right_header_hide {
@@ -44,7 +44,7 @@
   border: 0px solid red;
   position: absolute;
   font-size: 0;
-  right:1px;
+  right:0px;
   top:52px;
   z-index: 200;
 }
@@ -308,15 +308,21 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  cursor: pointer;
   box-shadow: 5px 5px 5px 0 rgba(0,0,0,.2);
 }
 #share_button a span {
   position:absolute;
   width: 120px;
   height: 40px;
-
   /* edit: added z-index */
   z-index: 1;
+}
+.top_button{
+  height: 110px !important;
+}
+.bottom_button{
+  background-color: #ed6f02;
 }
 .design_sf{
   font-size: 14px;
@@ -357,6 +363,7 @@
   font-size: 14px;
   color: #383838;
   margin-bottom: 20px;
+  text-align: center;
 }
 .material_content h4{
   margin-bottom: 20px;
@@ -369,6 +376,7 @@
   border: 1px solid #d5d5d5;
   padding: 20px;
   color:#7a7a7a;
+  text-align: left;
 }
 #design_material_list .material_content table tr td h5{
   font-size: 14px;

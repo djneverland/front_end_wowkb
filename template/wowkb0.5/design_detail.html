@@ -34,12 +34,10 @@
 
 <div class="design_detail_body">
     <div id="header">
-        <!--   <div id="supplier_header"></div> -->
-
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
             <div class="box_content">
-                <div id="top_share_button" class="show">
+                <div id="top_share_button" class="hide">
                     <div class="each_share" id="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                     <div class="each_share" id="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                     <div class="each_share" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
@@ -86,7 +84,7 @@
     <!-- 侧边栏按钮 -->
     <div class="right_page_button" id="right_page_button">
         <a href="#" onclick="designer()" class="inline">
-            <div class="button" id="button_designer">
+            <div class="button top_button" id="button_designer">
                 <img class="design_designer" src="../../image/designers/james.png">
                 James
             </div>
@@ -117,7 +115,7 @@
             </div>
         </a>
         <a href="#" class="inline">
-            <div class="button" id="button_start_customize">
+            <div class="button bottom_button" id="button_start_customize">
                 <i class="fa fa-caret-right" aria-hidden="true"></i></br>Start Customize
             </div>
         </a>
@@ -356,7 +354,7 @@
         } else {
             show();
 
-            button_designer.className = "choose_button";
+            button_designer.className = "choose_button top_button";
             button_intro.className = "button";
             button_list.className = "button";
             button_relate_material.className = "button";
@@ -376,7 +374,7 @@
         } else {
             show();
 
-            button_designer.className = "button";
+            button_designer.className = "button top_button";
             button_intro.className = "choose_button";
             button_list.className = "button";
             button_relate_material.className = "button";
@@ -396,7 +394,7 @@
         } else {
             show();
 
-            button_designer.className = "button";
+            button_designer.className = "button top_button";
             button_intro.className = "button";
             button_list.className = "choose_button";
             button_relate_material.className = "button";
@@ -416,7 +414,7 @@
         } else {
             show();
 
-            button_designer.className = "button";
+            button_designer.className = "button top_button";
             button_intro.className = "button";
             button_list.className = "button";
             button_relate_material.className = "choose_button";
@@ -437,7 +435,7 @@
         } else {
             show();
 
-            button_designer.className = "button";
+            button_designer.className = "button top_button";
             button_intro.className = "button";
             button_list.className = "button";
             button_relate_material.className = "button";
@@ -457,12 +455,12 @@
 
     $("#share_button").click(function () {
         if($("#top_share_button").hasClass( "show" )) {
-            $("#top_share_button").fadeOut("slow", function () {
+            $("#top_share_button").fadeOut("3000", function () {
                 $("#top_share_button").hide();
                 $("#top_share_button").removeClass("show").addClass("hide");
             });
         } else {
-            $("#top_share_button").fadeIn("slow", function () {
+            $("#top_share_button").fadeIn("3000", function () {
                 $("#top_share_button").removeClass("hide").addClass("show");
             });
         }
@@ -470,7 +468,7 @@
 
     function show() {
         right_header.className = "right_header";
-        $('#right_header').animate({right: '69px'});
+        $('#right_header').animate({right: '84px'});
     }
 
     function hide() {

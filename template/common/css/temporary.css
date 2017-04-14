@@ -6,6 +6,7 @@
    text-align: center;
    padding-bottom: 60px;
    max-width: 1260px;
+   font-family: Arial;
 }
 .designs_project{
   width:290px;
@@ -152,7 +153,7 @@
 	font-family: 'PingFang ExtraLight';
 }
 .header_start{
-	border: 2px solid #fff;
+	border: 2px solid orange;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;
@@ -162,6 +163,7 @@
 	margin-right: auto;
 	margin-top: 10vh;
 	font-size: 30px;
+	color: orange;
 }
 #show{
   background-size:cover;
