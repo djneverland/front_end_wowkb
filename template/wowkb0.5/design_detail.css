@@ -17,6 +17,7 @@
 }
 #button_designer img{
   width: 50px !important;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -30,7 +31,7 @@
   display: inline-block;
   vertical-align: top;
   overflow-y:scroll;
-  right: 0px;
+  right: 0;
   z-index: 100;
 }
 .right_header_hide {
@@ -126,35 +127,40 @@
 }
 .design_project_designer{
   width: 100%;
-  margin-top: 50px;
-  border-bottom: 1px solid #d5d5d5;
+  margin-top: 80px;
+  border-bottom: 0px solid red;
   padding-bottom: 20px;
-  padding-left: 20px;
+  text-align: center;
 }
 .designer_name{
   width: 100px;
+  text-align: center;
+  border: 0px solid red;
+  font-size: 16px;
 }
 #design_project_designer_head{
-  width: 48px;
+  width: 88px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.designer_contact{
   margin-top: 20px;
-  display: inline-block;
-  vertical-align: top;
+  color: #afafaf;
 }
 .design_project_designer_intro{
-  display: inline-block;
-  vertical-align: top;
   border:0px solid green;
   position: absolute;
-  margin-top: 16px;
-  margin-left: 10px;
+  margin-top: 20px;
   font-size: 14px;
-  padding-right: 20px;
 }
 .design_project_designer_des{
-  width: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   border: 0px solid red;
-  color: #a3a3a3;
-  font-size: 13px;
+  color: #383838;
+  font-size: 14px;
+  margin-top: 20px;
 }
 .design_title{
   border: 0px solid red;
@@ -171,10 +177,13 @@
   font-family: 'PingFang ExtraLight';
   margin-top: 20px;
 }
+.price_title{
+  font-size: 16px;
+}
 .design_project_detail_price{
   border: 0px solid red;
-  margin-top: 40px;
-  margin-left: 20px;
+  margin-top: 140px;
+  text-align: center;
 }
 .price_number{
   font-size:28px;
@@ -332,7 +341,7 @@
   border: 0px solid red;
   font-size: 14px;
   color: #383838;
-  margin-top: 80px;
+  margin-top: 100px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -363,6 +372,10 @@
 }
 #design_material_list .material_content table tr td h5{
   font-size: 14px;
+  color: #383838;
+}
+#design_material_list .material_content table tr td .material_detail{
+  font-size: 12px;
 }
 .material_content table tr td .material_num{
   color: #fca416;
@@ -370,11 +383,13 @@
   font-size: 14px;
 }
 .each_relate_material{
-  width: 160px;
-  border:1px solid red;
+  width: 180px;
+  border:0px solid red;
   display: inline-block;
   vertical-align: top;
-  margin: 8px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 .related_design_content{
   margin-top: 56px;
@@ -382,6 +397,10 @@
   margin-right: auto;
   border: 0px solid red;
   text-align: center;
+  margin-top: 110px;
+}
+.related_design_content h4{
+  margin-bottom: 20px;
 }
 .each_relate_design{
   width: 180px;
@@ -504,6 +523,7 @@
     padding-top: 8px;
     border: 0px solid red;
   }
+
   .right_page_button .button i{
     margin-bottom: 8px;
   }
