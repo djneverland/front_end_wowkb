@@ -151,7 +151,9 @@
 }
 .design_project_designer_intro{
   border:0px solid green;
-  position: absolute;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   font-size: 14px;
 }
@@ -184,7 +186,7 @@
 }
 .design_project_detail_price{
   border: 0px solid red;
-  margin-top: 140px;
+  margin-top: 20px;
   text-align: center;
 }
 .price_number{
