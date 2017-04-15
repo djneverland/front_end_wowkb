@@ -5,13 +5,15 @@
 }
 #header{
   height: 100vh;
-  width: 93.2%;
+  width: 100%;
   border: 0px solid blue;
   display: inline-block;
   vertical-align: top;
 }
 @media only screen and (min-device-width: 781px) {
   #myCarousel img {
+    width: 100%;
+    min-width: 1000px;
     min-height: 100vh;
   }
 }
@@ -31,7 +33,7 @@
   display: inline-block;
   vertical-align: top;
   overflow-y:scroll;
-  right: 84px;
+  right: -15px;
   z-index: 100;
 }
 .right_header_hide {
@@ -44,7 +46,7 @@
   border: 0px solid red;
   position: absolute;
   font-size: 0;
-  right:0px;
+  right:-84px;
   top:52px;
   z-index: 200;
 }
@@ -286,6 +288,7 @@
 }
 #facebook{
   background-color:#3b5998;
+  position: relative;
 }
 #twitter{
   background-color: #00aced;
@@ -439,8 +442,14 @@
 }
 
 @media only screen and (max-device-width: 780px) {
+  #test_screen { display: none; }
+
   #header{
     width: 100%;
+  }
+
+  #myCarousel {
+    height: 40vh;
   }
 
   #top_share_button{
@@ -454,11 +463,10 @@
   .box_content{
     width: 100%;
     height: 60px;
-    background-color: rgba(1,1,1,1);
     position: absolute;
-    z-index: 99;
+    z-index: 100;
     left: 0;
-    top: 32vh;
+    top: 28vh;
     font-size: 14px;
     color: #fff;
     padding-top: 5px;
@@ -476,8 +484,8 @@
     display: inline-block;
     vertical-align: top;
     overflow-y:scroll;
-    top: 42vh;
-    z-index: 100;
+    top: 52vh;
+    z-index: 200;
   }
   .right_header_hide {
     height: 100vh;
@@ -489,45 +497,34 @@
     display: inline-block;
     vertical-align: top;
     overflow-y:scroll;
-    top: 42vh;
-    z-index: 100;
+    top: 60vh;
+    z-index: 200;
   }
   .right_page_button {
     width: 100%;
-    padding-left: 8vh;
-    padding-right: 8vh;
+    height: 40vh;
+    height: 26vh;
     background-color: #000;
     border: 0px solid red;
     position: fixed;
     font-size: 0;
     left:0px;
-    top:38vh;
-    z-index: 200;
-  }
-  .right_page_button_hide {
-    width: 100%;
-    padding-left: 8vh;
-    padding-right: 8vh;
-    background-color: #000;
-    border: 0px solid red;
-    position: fixed;
-    font-size: 0;
-    left: 0px;
-    top: 38vh;
-    z-index: 200;
+    top:37vh;
+    z-index: 201;
   }
   #button_designer {
+    height: 90px !important;
   }
   .inline {
     float: left;
     display: inline-block;
   }
   .right_page_button .button{
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;
     text-align: center;
-    height: 64px;
-    width: 64px;
+    height: 72px;
+    width: 20vh;
     padding-top: 8px;
     border: 0px solid red;
   }
@@ -535,17 +532,13 @@
   .right_page_button .button i{
     margin-bottom: 8px;
   }
-  .right_page_button .button:hover{
-    background-color: #383838;
-    text-decoration: none;
-  }
   .right_page_button .choose_button{
-    font-size: 12px;
+    font-size: 10px;
     background-color: #383838;
     color: #fff;
     text-align: center;
-    height: 64px;
-    width: 64px;
+    height: 72px;
+    width: 20vh;
     padding-top: 8px;
   }
 }

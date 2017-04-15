@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wow Kitchen & Bath</title>
+
+    <meta property="og:url"           content="ttp://beta.wowkb.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Wow Kitchen & Bath" />
+    <meta property="og:description"   content="这一页的内容" />
+    <meta property="og:image"         content="https://iss.zillowstatic.com/image/traditional-kitchen-with-reclaimed-wood-breakfast-bar-and-stone-backsplash-i_g-IS95uzii6vxfm11000000000-LmSnE.jpg" />
+
     <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
     <link rel="stylesheet" type="text/css" href="design_detail.css">
@@ -38,7 +45,10 @@
 
             <div class="box_content">
                 <div id="top_share_button" class="hide">
-                    <div class="each_share" id="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="each_share" id="facebook">
+                        <div class="fb-share-button" data-href="http://beta.wowkb.com/"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbeta.wowkb.com%2F&amp;src=sdkpreparse" style="text-decoration: none; color:white; z-index: 200;"></a></div>
+                        <i class="fa fa-facebook" aria-hidden="true" style="position: absolute; top: 38%; left: 42%;"></i>
+                    </div>
                     <div class="each_share" id="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                     <div class="each_share" id="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                     <div class="each_share" id="tumblr"><i class="fa fa-tumblr" aria-hidden="true"></i></div>
@@ -326,6 +336,7 @@
 
     </div><!-- right_header -->
 </div><!-- design_detail_body -->
+<div id="test_screen"></div>
 <script type="text/javascript">
     /*
     $("#myCarousel").width($( document ).width() - 84);
@@ -453,6 +464,35 @@
         hide();
     });
 
+    $('#right_header').animate({right: '-600px'});
+
+
+    $( document ).ready(function() {
+        if($('#test_screen').css('display')!='none') {
+            $("#header").width($(window).width() - 84);
+            $("#top_share_button").removeClass("show").addClass("hide");
+            $(".right_page_button .button").width(84);
+        } else {
+            $("#header").width($(window).width());
+            $("#top_share_button").removeClass("hide").addClass("show");
+            $(".right_page_button .button").width($(window).width()/5);
+            $("#button_designer").width($(window).width());
+        }
+    });
+
+    $( window ).resize(function() {
+        if($('#test_screen').css('display')!='none') {
+            $("#header").width($(window).width() - 84);
+            $("#top_share_button").removeClass("show").addClass("hide");
+            $(".right_page_button .button").width(84);
+        } else {
+            $("#header").width($(window).width());
+            $("#top_share_button").removeClass("hide").addClass("show");
+            $(".right_page_button .button").width($(window).width()/5);
+            $("#button_designer").width($(window).width());
+        }
+    });
+
     $("#share_button").click(function () {
         if($("#top_share_button").hasClass( "show" )) {
             $("#top_share_button").fadeOut("3000", function () {
@@ -468,12 +508,12 @@
 
     function show() {
         right_header.className = "right_header";
-        $('#right_header').animate({right: '84px'});
+        $('#right_header').animate({right: '-15px'});
     }
 
     function hide() {
         $('#right_header').animate({right: '-600px'});
-        button_designer.className = "button";
+        button_designer.className = "button top_button";
         button_intro.className = "button";
         button_list.className = "button";
         button_relate_material.className = "button";
@@ -481,6 +521,14 @@
         right_header.className = "right_header_hide";
     }
 </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=952956818145782";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>
