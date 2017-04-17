@@ -1528,7 +1528,7 @@
 	margin-left: 10px;
 	color: #383838;
 }
-.process_center_circle{
+.process_center_circle_stay{
 	width: 20px;
 	height: 20px;
 	border: 1px solid orange;
@@ -1538,6 +1538,19 @@
 	color: orange;
 	margin-left: -10px;
 	background-color: #ebebeb;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.process_center_circle_select{
+	width: 20px;
+	height: 20px;
+	border: 1px solid orange;
+	border-radius: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	color: #fff;
+	margin-left: -10px;
+	background-color: orange;
 	margin-top: 60px;
 	margin-bottom: 60px;
 }
