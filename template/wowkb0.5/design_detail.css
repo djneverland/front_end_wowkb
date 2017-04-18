@@ -35,6 +35,7 @@
   overflow-y:scroll;
   right: -15px;
   z-index: 100;
+  margin-right: 18px;
 }
 .right_header_hide {
   width: 0;
@@ -268,7 +269,7 @@
   position: absolute;
   z-index: 99;
   left: 0;
-  bottom: 10vh;
+  bottom: 14vh;
   border: 0px solid red;
   font-size: 14px;
   color: #fff;
@@ -443,24 +444,7 @@
 #design_material_intro{
   display: none;
 }
-.submit_button_pop{
-  width: 120px;
-  height: 40px;
-  border: 1px solid orange;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: orange;
-  margin-top: 20px;
-  border-radius: 30px;
-}
-.submit_button_pop:hover{
-  background-color: orange;
-  color: #fff;
-}
-.submit_button_pop:focus{
-  border: 1px solid orange;
-  outline: none;
 
-}
 @media only screen and (min-device-width: 780px) {
   #form_customize {
     background-color: rgba(255, 255, 255, 0.9);
@@ -490,7 +474,6 @@
   top: 5px;
   right: 5px;
   color: #383838;
-  cursor: pointer;
 }
 
 @media only screen and (max-device-width: 780px) {
@@ -605,7 +588,6 @@
     text-align: center;
     padding: 20px;
     display: none;
-    border-radius: 4px;
   }
 
   #form_customize .form_title {
@@ -620,4 +602,11 @@
     margin: 10px auto;
   }
 
+}
+
+.side_button_icon{
+  width: 26px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
 }

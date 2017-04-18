@@ -148,7 +148,7 @@
 	margin-right: auto;
 	margin-top: 10vh;
 	font-size: 16px;
-	color: orange;
+	color: #ebebeb;
 	line-height: 1.4;
 	font-family: 'PingFang ExtraLight';
 }
@@ -222,15 +222,13 @@
 }
 .section_title h4{
 	color: #383838;
-/*	font-family: 'PingFang ExtraLight'*/
 }
 .section_title p{
 	color: #5d5d5d;
-/*	font-family: 'PingFang ExtraLight'*/
 }
 .step_section{
-/*	background-color: #393c3d;*/
-	padding-bottom: 200px;
+/*	padding-bottom: 200px;
+*/	border: 0px solid red;
 }
 .design_steps{
 	border: 0px solid green;
@@ -265,9 +263,11 @@
 	color: #383838;
 	border: 0px solid red;
 	margin-top: 20px;
+	font-size: 16px;
 }
 .step_intro_des{
 	color: #7a7a7a;
+	font-size: 14px;
 }
 .line_button{
 	width: 120px;
@@ -1607,4 +1607,9 @@
 }
 .page_intro_top h4{
 	margin-bottom: 50px;
+}
+.each_step img{
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
 }
