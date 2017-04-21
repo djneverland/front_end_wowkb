@@ -81,20 +81,20 @@
   	<h4>申请流程</h4>
   	<div class="process_content">
   		<div class="process_left">
-  			<div class="process_box bubble">
+  			<div id="box_1" class="process_box bubble">
   				<img src="../../image/designer_step1.png">
   				<div class="process_box_intro">
   					<h4>在线填写申请表</h4>
   				</div>		
   			</div>
-  			<div class="process_box bubble">
+  			<div id="box_3" class="process_box bubble">
   				<img src="../../image/designer_step3.png">
   				<div class="process_box_intro">
   					<h4>业务培训</h4>
   					我们会安排时间进行业务培训课程
   				</div>
   			</div>
-  			<div class="process_box bubble">
+  			<div id="box_5" class="process_box bubble">
   				<img src="../../image/designer_step5.png">
   				<div class="process_box_intro">
   					<h4>开通账户</h4>
@@ -111,21 +111,21 @@
   			<div class="process_center_circle_stay">6</div>
   		</div>
   		<div class="process_right">
-  			<div class="process_box bubble_left">
+  			<div id="box_2" class="process_box bubble_left">
   				<img src="../../image/designer_step2.png">
   				<div class="process_box_intro">
   					<h4>背景调查</h4>
   					我们需要确认您的信息完整与真实
   				</div>
   			</div>
-  			<div class="process_box bubble_left">
+  			<div id="box_4" class="process_box bubble_left">
   				<img src="../../image/designer_step4.png">
   				<div class="process_box_intro">
   					<h4>作品审核</h4>
   					您需要提交至少三个设计作品进行审核
   				</div>
   			</div>
-  			<div class="process_box bubble_left">
+  			<div id="box_6" class="process_box bubble_left">
   				<img src="../../image/designer_step6.png">
   				<div class="process_box_intro">
   					<h4>开始服务</h4>
@@ -188,5 +188,55 @@
       </div>
     </div>
 </div>
+<script>
+    $("html, body").animate({
+        scrollTop: 0
+    }, 300);
+
+    function isFullyVisible (elem) {
+        var off = elem.offset();
+        var et = off.top;
+        //var el = off.left;
+        var eh = elem.height();
+        //var ew = elem.width();
+        var wh = window.innerHeight;
+        //var ww = window.innerWidth;
+        //var wx = window.pageXOffset;
+        var wy = window.pageYOffset - 200;
+        //return (et >= wy && el >= wx && et + eh <= wh + wy && el + ew <= ww + wx);
+        return (et >= wy && et + eh <= wh + wy);
+    }
+
+    $("html, body").on( 'DOMMouseScroll mousewheel scroll click keypress', function ( event ) {
+
+        //if( event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0 ) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+            if(isFullyVisible($('#box_1'))) {
+                $( "#box_1" ).removeClass( "bubble" );
+                $( "#box_1" ).addClass( "bubble_after" );
+            }
+            if(isFullyVisible($('#box_2'))) {
+                $( "#box_2" ).removeClass( "bubble_left" );
+                $( "#box_2" ).addClass( "bubble_left_after" );
+            }
+            if(isFullyVisible($('#box_3'))) {
+                $( "#box_3" ).removeClass( "bubble" );
+                $( "#box_3" ).addClass( "bubble_after" );
+            }
+            if(isFullyVisible($('#box_4'))) {
+                $( "#box_4" ).removeClass( "bubble_left" );
+                $( "#box_4" ).addClass( "bubble_left_after" );
+            }
+            if(isFullyVisible($('#box_5'))) {
+                $( "#box_5" ).removeClass( "bubble" );
+                $( "#box_5" ).addClass( "bubble_after" );
+            }
+            if(isFullyVisible($('#box_6'))) {
+                $( "#box_6" ).removeClass( "bubble_left" );
+                $( "#box_6" ).addClass( "bubble_left_after" );
+            }
+
+        //}
+    });
+</script>
 </body>
 </html>
