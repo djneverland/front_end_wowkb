@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WOWKB</title>
-  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
-  <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOWKB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/99d52acf31.js"></script>
 </head>
 <body>
 <nav id="navtop" role="navigation" class="navbar navbar-fixed-top navbar-inverse">
@@ -29,6 +29,8 @@
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><div id="chinese">中文</div></a></li>
+                <li><a href="#"><div id="english">English</div></a></li>
                 <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
                 <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>               
             </ul>
@@ -39,26 +41,26 @@
 
 <div id="page_intro">
   <div class="page_intro_up">
-    <h2>关于我们</h2>
+    <h2 id="trnas1">关于我们</h2>
   </div>
   <div class="pageheader_bg"></div>
     <img class="pageheader" class="pageheader" src="../../image/pageheader.png">   
 </div>
 
 <div class="supplier_catogory_menu">
-    <a class="catogory_button catogory_button_choose" href="/prewowkb/Tpl/account/about.html">公司简介</a>
+    <a class="catogory_button catogory_button_choose" href="/prewowkb/Tpl/account/about.html" id="trnas2">公司简介</a>
 <!--     <div class="button_center_line"></div> -->
 <!--     <a class="catogory_button" href="/prewowkb/Tpl/account/about_project.html">项目介绍</a> -->
     <div class="button_center_line"></div>
-    <a class="catogory_button" href="/prewowkb/Tpl/account/about_service.html">服务流程</a>
+    <a class="catogory_button" href="/prewowkb/Tpl/account/about_service.html" id="trnas3">服务流程</a>
     <div class="button_center_line"></div>
-    <a class="catogory_button" href="/prewowkb/Tpl/account/about_hire.html">职位招聘</a>
+    <a class="catogory_button" href="/prewowkb/Tpl/account/about_hire.html" id="trnas4">职位招聘</a>
 </div>
 
 <div id="body">
   <div class="aboutus_intro">
-    <h3>欢迎来到WOWKB</h3></br>
-    <p>
+    <h3 id="trnas5">欢迎来到WOWKB</h3></br>
+    <p id="trnas6">
     WOWKB是一个装修定制方案共享平台，通过房主与设计师、物料商、施工承包商共享与协作，来完成繁琐的装修定制服务。
     装修工作是繁琐的，我们正在将它变得简单；WOWKB平台有很多的项目定制方案，真实的设 计作品与产品信息，准确的预算与价格，您可以在线选择喜欢的定制方案，找到并联系您的设计师、产品销售顾问、施工承包商，与他们交流想法与灵感，告诉他们您的需求，并将您的需求汇总成您自己的装修定制方案，我们相信装修工作是简单、轻松和愉快的，我们希望能给您全新的服务体验。
     </p>
@@ -66,7 +68,7 @@
   <div class="aboutus_gapline"></div>
   <div id="map"></div>
   <div class="contact_info">
-    <h4>联系我们</h4>
+    <h4 id="trnas7">联系我们</h4>
     <p>
       customerservice@wowkb.com</br>
       97 E Brokaw Road, #310</br>
@@ -77,32 +79,81 @@
 
 <div class="bottom_space"></div>
 </div>
-<script>
-      function initMap() {
-        // Create a map object and specify the DOM element for display.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 37.37545, lng: -121.91640},
-          scrollwheel: false,
-          zoom: 12
-        });
-        marker = new google.maps.Marker({
-          map: map,
-          draggable: true,
-          animation: google.maps.Animation.DROP,
-          position: {lat: 37.37545, lng: -121.91640}
-        });
-        marker.addListener('click', toggleBounce);
+    <script>
+          function initMap() {
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 37.37545, lng: -121.91640},
+              scrollwheel: false,
+              zoom: 12
+            });
+            marker = new google.maps.Marker({
+              map: map,
+              draggable: true,
+              animation: google.maps.Animation.DROP,
+              position: {lat: 37.37545, lng: -121.91640}
+            });
+            marker.addListener('click', toggleBounce);
+          }
+          function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+              marker.setAnimation(null);
+            } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
       }
-      function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
+    }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAr7z43-TMU2Ezj3wT5m2S_FTzFnlWiGE&callback=initMap"
     async defer></script>
+    <script>
+        function toChinese() {
+            $("#trnas1").html("关于我们");
+            $("#trnas2").html("公司简介");
+            $("#trnas3").html("服务流程");
+            $("#trnas4").html("职位招聘");
+            $("#trnas5").html("欢迎来到WOWKB");
+            $("#trnas6").html("WOWKB是一个装修定制方案共享平台，通过房主与设计师、物料商、施工承包商共享与协作，来完成繁琐的装修定制服务。\n装修工作是繁琐的，我们正在将它变得简单；WOWKB平台有很多的项目定制方案，真实的设 计作品与产品信息，准确的预算与价格，您可以在线选择喜欢的定制方案，找到并联系您的设计师、产品销售顾问、施工承包商，与他们交流想法与灵感，告诉他们您的需求，并将您的需求汇总成您自己的装修定制方案，我们相信装修工作是简单、轻松和愉快的，我们希望能给您全新的服务体验。");
+            $("#trnas7").html("联系我们");
+        }
+
+        function toEnglish() {
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=关于我们", function (data) {
+                $("#trnas1").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=公司简介", function (data) {
+                $("#trnas2").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=服务流程", function (data) {
+                $("#trnas3").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=职位招聘", function (data) {
+                $("#trnas4").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=欢迎来到 WOWKB", function (data) {
+                $("#trnas5").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=WOWKB是一个装修定制方案共享平台，通过房主与设计师、物料商、施工承包商共享与协作，来完成繁琐的装修定制服务。装修工作是繁琐的，我们正在将它变得简单；WOWKB平台有很多的项目定制方案，真实的设 计作品与产品信息，准确的预算与价格，您可以在线选择喜欢的定制方案，找到并联系您的设计师、产品销售顾问、施工承包商，与他们交流想法与灵感，告诉他们您的需求，并将您的需求汇总成您自己的装修定制方案，我们相信装修工作是简单、轻松和愉快的，我们希望能给您全新的服务体验。", function (data) {
+                $("#trnas6").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=联系我们", function (data) {
+                $("#trnas7").html(data.data.translations[0].translatedText);
+            });
+        }
+
+        $( document ).ready( function() {
+            $("#chinese").css("display", "none");
+        });
+        $("#chinese").click(function () {
+            $("#chinese").css("display", "none");
+            $("#english").css("display", "block");
+            toChinese();
+        });
+        $("#english").click(function () {
+            $("#chinese").css("display", "block");
+            $("#english").css("display", "none");
+            toEnglish();
+        });
+    </script>
 </body>
 </html>
 
