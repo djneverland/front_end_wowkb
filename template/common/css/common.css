@@ -192,7 +192,9 @@ input[type="color"]:focus,
 /*导航栏 navigation bar*/
 
 #navtop{
-	padding-right: 10px;
+	padding-right: 30px;
+	border: 0px solid red;
+	background-color: rgba(5,5,5,1)
 	/*
 	width:100%;
 	height:52px !important;
@@ -201,18 +203,24 @@ input[type="color"]:focus,
 }
 
 #nav_logo{
-	padding-top: 12px;
-	width: 136px;
+	padding-top: 14px;
+	width: 160px;
 	margin-left: 30px;
 	display: inline-block;
 	vertical-align: top;
 }
 .nav_option{
-	font-size: 15px !important;
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	color: #fff;
+  font-size: 14px !important;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  color: #fff !important;
+  margin-top: -1px;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  line-height: 30px;
 }
 .nav_option:hover{
 	color: orange;
@@ -221,50 +229,24 @@ input[type="color"]:focus,
 	color: #f8a041;
 }
 #nav_sign_signin{
-	width: 100px;
-	border-radius: 50px;
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	border: 1px solid orange;
-	color: orange;
-	font-size: 15px;
+/*  width: 100px;*/
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: -2px;
+  text-align: center;
+  border: 1px solid #FF6500;
+  color:#FF6500;
+  font-size: 14px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 @media only screen and (max-width: 767px) {
 	.nav_option, #nav_sign_signin{
 		margin-left: 30px;
 	}
 }
-/*
-#nav_link1{
-  border:0px solid red;
-  display: inline-block;
-  vertical-align: top;
-  float: right;
-  padding-right: 40px;
-}
-#nav_link2{
-  border:0px solid red;
-  display: inline-block;
-  vertical-align: top;
-  float: right;
-}
-#nav_account{
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 10px;
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-}
-#accountName{
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 20px;
-  margin-left: 10px;
-  border: 0px solid red;
-}
-*/
 
 /*侧边栏 sidebar*/
 #sidebar_message{
