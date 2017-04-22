@@ -165,12 +165,14 @@
               </tr>
               <tbody id="tb1">
               <tr>
-                <td>产品编号<span class="required">*</span></td>
+                <td>产品<span class="required">*</span></td>
                 <td id="addmaterial">
                   <input type="text" class="input-field-short" name="" value="" required="true" />
                   <input type="text" class="input-field-short" name="" value="" required="true" />
-                  <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 产品库搜索</i></a>
-                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div class="type_counter">输入产品编号<span class="right">输入数量</span></div>
+                  <input type="text" class="input-field-short" name="" value="" required="true" />
+                  <input type="text" class="input-field-short" name="" value="" required="true" />
+                  <!-- <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 产品库搜索</i></a> -->
+                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div class="type_counter">输入产品名称<span class="right">输入颜色</span><span class="right">输入材质</span><span class="right">输入数量</span></div>
                 </td>
               </tr>
             </tbody>
@@ -238,7 +240,7 @@ function popmaterial()
   $("#addMaterialButton").click(function() {
     var trObj = document.createElement("tr");  
     trObj.id = new Date().getTime();  
-    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";  
+    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/><input name='' class='input-field-short' type='text'/><input name='' class='input-field-short' type='text'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";  
     $("#tb1").append(trObj);  
   });
   function del(obj) {  
