@@ -1231,7 +1231,6 @@
 	color: orange;
 	background-color: #fff;
 	border-radius: 4px;
-	margin-left: 10px;
 }
 .upload_form input:focus{
 	outline: none;
@@ -1280,9 +1279,9 @@
 	font-size: 12px;
 	color: #afafaf;
 	margin-left: 0px;
-}
-.type_counter .right{
-	margin-left: 116px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 98px;
 }
 .upload_blank{
 	margin-top: 20px;
