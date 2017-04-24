@@ -120,6 +120,7 @@
             $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=关于我们", function (data) {
                 $("#trnas1").html(data.data.translations[0].translatedText);
             });
+
             $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=公司简介", function (data) {
                 $("#trnas2").html(data.data.translations[0].translatedText);
             });

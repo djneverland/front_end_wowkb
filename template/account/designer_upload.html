@@ -11,35 +11,89 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    #imgInp {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    #imgInp + label {
+      height: 30px;
+      padding: 0px 5px 5px 5px;
+      font-size: 1em;
+      font-weight: 700;
+      color: white;
+      background-color: black;
+      display: inline-block;
+    }
+
+    #imgInp:focus + label,
+    #imgInp + label:hover {
+      background-color: red;
+    }
+    #imgInp + label {
+      cursor: pointer; /* "hand" cursor */
+    }
+    #upload_images {
+      width: 80%;
+      min-width: 400px;
+      max-height: 200px;
+      list-style: none;
+      padding: 20px;
+      overflow: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      display: none;
+    }
+    #upload_images li {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+      margin: 2px;
+    }
+    #upload_images li span {
+      float:right;
+      color: red;
+      margin: 10px 8px -20px 0px;
+    }
+    #upload_images li img {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 <!-- {%include file="$root/template/common/navbar.html"%} -->
 <nav id="navtop" role="navigation" class="navbar navbar-fixed-top navbar-inverse">
-    <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a  id="nav_logo" href="designs.html" class="navbar-brand">
-                <img id="nav_logo_pic" src="../../image/logo4.png">
-            </a>
-        </div>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
-                <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>               
-            </ul>
-        </div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a  id="nav_logo" href="designs.html" class="navbar-brand">
+      <img id="nav_logo_pic" src="../../image/logo4.png">
+    </a>
+  </div>
+  <!-- Collection of nav links, forms, and other content for toggling -->
+  <div id="navbarCollapse" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
+      <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>
+    </ul>
+  </div>
 </nav>
 
 
 <div id="body_dash">
-<!--     {%include file="$root/template/common/sidebar.html"%} -->
-<div id="designer" class="admin_sidebar">
+  <!--     {%include file="$root/template/common/sidebar.html"%} -->
+  <div id="designer" class="admin_sidebar">
     <div id="userPic">
       <img src="../../image/head.png">
     </div>
@@ -54,131 +108,136 @@
       <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
       <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
       <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
-    </div>    
-</div>
-    
-    
-<div id="admin_main">
-          <form name="productForm" action="" method="post" enctype="multipart/form-data">
-            
-            <table class="upload_form">
-              <tr>
-                <td>作品名称<span class="required">*</span></td>
-                <td><input type="text" name="work_name" value="" required="true"/></td>
-              </tr>
-              <tr>
-                <td>作品类别</td>
-                <td>
-                  <select id="mySelect1" onchange="myFunction()" required>
-                    <option value="">请选择</option>
-                    <option disabled="disabled">----</option>
-                    <option value="customize">家具设计</option>
-                    <option value="renew">空间规划</option>
-                    <option value="addroom">室内装修</option>
-                    <option value="renew">景观</option>
-                    <option value="addroom">建筑</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>设计图片<span class="required">*</span></td>
-                <td><input type="file" name="designpicture" required>
-                  <div class="type_counter">最多上传10张</div>
-                </td>
-              </tr>
-              <tr>
-                <td>设计报价<span class="required">*</span></td>
-                <td><input type="number" class="input-field" name="" value="" type="number" min="1" required="true" /><!-- <a title="popup" onclick="return popup()"><i class="fa fa-calculator icon_style" aria-hidden="true"> 报价计算器</i></a> -->
-                <div class="type_counter">只输入数字</div>
-              </td>
-              </tr>
-              <tr>
-                <td>作品信息 <span class="required">*</span></td>
-                <td><textarea maxlength="250" id="status" name="status" class="textarea-field supplier_info_textarea" onkeydown='countChar("status","counter");' onkeyup='countChar("status","counter");' required="true"></textarea></br><div class="type_counter">可以输入<span id="counter">250</span>字<br/></div></td>
-              </tr>
-              <tr>
-                <td>作品风格<span class="required">*</span></td>
-                <td>
-                  <select id="mySelect2" required>
-                    <option value="">请选择</option>
-                    <option disabled="disabled">----</option>
-                    <option value="customize">Mid-century Modern Style</option>
-                    <option value="renew">Modern Style</option>
-                    <option value="addroom">Art Deco Style</option>
-                    <option value="renew">Minimalism Style</option>
-                    <option value="addroom">Traditional Style</option>
-                    <option value="customize">Chinese Style</option>
-                    <option value="renew">Japanese Style</option>
-                    <option value="addroom">Scandinavian Design Style</option>
-                    <option value="renew">Eclectic Style</option>
-                    <option value="addroom">Country Style</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>空间面积<span class="required">*</span></td>
-                <td>
-                  <select id="mySelect3" required>
-                    <option value="">请选择</option>
-                    <option disabled="disabled">----</option>
-                    <option value="customize">Smaller: < 70 sq. ft</option>
-                    <option value="renew">Small: 71 - 100 sq.ft</option>
-                    <option value="addroom">Medium: 101 - 200 sq. ft</option>
-                    <option value="renew">Large: 201 - 400 sq. ft</option>
-                    <option value="addroom">Larger: > 400 sq. ft</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>形状<span class="required">*</span></td>
-                <td>
-                  <select id="mySelect4" onchange="myFunction()" required>
-                    <option value="">请选择</option>
-                    <option disabled="disabled">----</option>
-                    <option value="customize">正方形</option>
-                    <option value="renew">长方形</option>
-                    <option value="addroom">多边形</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>布局<span class="required">*</span></td>
-                <td>
-                  <select id="mySelect5" onchange="myFunction()" required>
-                    <option value="">请选择</option>
-                    <option disabled="disabled">----</option>
-                    <option value="customize">一字型</option>
-                    <option value="renew">一字型带中岛</option>
-                    <option value="addroom">L型</option>
-                    <option value="renew">L型带中岛</option>
-                    <option value="addroom">U型</option>
-                    <option value="customize">U型带中岛</option>
-                    <option value="renew">G型</option>
-                    <option value="addroom">步入型</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <div class="design_upload_title upload_blank">产品清单关联</div>
-                </td>
-              </tr>
-              <tbody id="tb1">
-              <tr>
-                <td>产品编号<span class="required">*</span></td>
-                <td id="addmaterial">
-                  <input type="text" class="input-field-short" name="" value="" required="true" />
-                  <input type="text" class="input-field-short" name="" value="" required="true" />
-                  <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 产品库搜索</i></a>
-                  <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div class="type_counter">输入产品编号<span class="right">输入数量</span></div>
-                </td>
-              </tr>
-            </tbody>
-            </table>
-              <span>&nbsp;</span><input class="submit_button button_left" type="submit" id="submitButton" value="提交"/>
-          </form>
-      </div>
+    </div>
   </div>
+
+
+  <div id="admin_main">
+    <form name="productForm" action="" method="post" enctype="multipart/form-data">
+
+      <table class="upload_form">
+        <tr>
+          <td>作品名称<span class="required">*</span></td>
+          <td><input type="text" name="work_name" value="" required="true"/></td>
+        </tr>
+        <tr>
+          <td>作品类别</td>
+          <td>
+            <select id="mySelect1" onchange="myFunction()" required>
+              <option value="">请选择</option>
+              <option disabled="disabled">----</option>
+              <option value="customize">家具设计</option>
+              <option value="renew">空间规划</option>
+              <option value="addroom">室内装修</option>
+              <option value="renew">景观</option>
+              <option value="addroom">建筑</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>设计图片<span class="required">*</span></td>
+          <td>
+            <input class="btn" type="file" id="imgInp" name="designpicture" accept="image/*" multiple required>
+            <label for="imgInp">Choose a file</label>
+            <div class="type_counter">最多上传10张</div>
+            <div id="upload_images">
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>设计报价<span class="required">*</span></td>
+          <td><input type="number" class="input-field" name="" value="" type="number" min="1" required="true" /><!-- <a title="popup" onclick="return popup()"><i class="fa fa-calculator icon_style" aria-hidden="true"> 报价计算器</i></a> -->
+            <div class="type_counter">只输入数字</div>
+          </td>
+        </tr>
+        <tr>
+          <td>作品信息 <span class="required">*</span></td>
+          <td><textarea maxlength="250" id="status" name="status" class="textarea-field supplier_info_textarea" onkeydown='countChar("status","counter");' onkeyup='countChar("status","counter");' required="true"></textarea></br><div class="type_counter">可以输入<span id="counter">250</span>字<br/></div></td>
+        </tr>
+        <tr>
+          <td>作品风格<span class="required">*</span></td>
+          <td>
+            <select id="mySelect2" required>
+              <option value="">请选择</option>
+              <option disabled="disabled">----</option>
+              <option value="customize">Mid-century Modern Style</option>
+              <option value="renew">Modern Style</option>
+              <option value="addroom">Art Deco Style</option>
+              <option value="renew">Minimalism Style</option>
+              <option value="addroom">Traditional Style</option>
+              <option value="customize">Chinese Style</option>
+              <option value="renew">Japanese Style</option>
+              <option value="addroom">Scandinavian Design Style</option>
+              <option value="renew">Eclectic Style</option>
+              <option value="addroom">Country Style</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>空间面积<span class="required">*</span></td>
+          <td>
+            <select id="mySelect3" required>
+              <option value="">请选择</option>
+              <option disabled="disabled">----</option>
+              <option value="customize">Smaller: < 70 sq. ft</option>
+              <option value="renew">Small: 71 - 100 sq.ft</option>
+              <option value="addroom">Medium: 101 - 200 sq. ft</option>
+              <option value="renew">Large: 201 - 400 sq. ft</option>
+              <option value="addroom">Larger: > 400 sq. ft</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>形状<span class="required">*</span></td>
+          <td>
+            <select id="mySelect4" onchange="myFunction()" required>
+              <option value="">请选择</option>
+              <option disabled="disabled">----</option>
+              <option value="customize">正方形</option>
+              <option value="renew">长方形</option>
+              <option value="addroom">多边形</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>布局<span class="required">*</span></td>
+          <td>
+            <select id="mySelect5" onchange="myFunction()" required>
+              <option value="">请选择</option>
+              <option disabled="disabled">----</option>
+              <option value="customize">一字型</option>
+              <option value="renew">一字型带中岛</option>
+              <option value="addroom">L型</option>
+              <option value="renew">L型带中岛</option>
+              <option value="addroom">U型</option>
+              <option value="customize">U型带中岛</option>
+              <option value="renew">G型</option>
+              <option value="addroom">步入型</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="design_upload_title upload_blank">产品清单关联</div>
+          </td>
+        </tr>
+        <tbody id="tb1">
+        <tr>
+          <td>产品编号<span class="required">*</span></td>
+          <td id="addmaterial">
+            <input type="text" class="input-field-short" name="" value="" required="true" />
+            <input type="text" class="input-field-short" name="" value="" required="true" />
+            <a title="popmaterial" onclick="return popmaterial()"><i class="fa fa-cube icon_style" aria-hidden="true"> 产品库搜索</i></a>
+            <input type="button" class="addbutton" value="增加" id="addMaterialButton"><br /><div class="type_counter">输入产品编号<span class="right">输入数量</span></div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <span>&nbsp;</span><input class="submit_button button_left" type="submit" id="submitButton" value="提交"/>
+    </form>
+  </div>
+</div>
 
 <!-- {%include file="$root/template/common/footer.html"%} -->
 <!-- <div id="bottombar">
@@ -215,88 +274,159 @@
       <div class="bottom_share"></div>
     </div>
 </div> -->
-<script language="javascript"> 
-function countChar(textareaName,spanName) 
-{ 
-document.getElementById(spanName).innerHTML = 250 - document.getElementById(textareaName).value.length; 
-} 
+<script language="javascript">
+  function countChar(textareaName,spanName)
+  {
+    document.getElementById(spanName).innerHTML = 250 - document.getElementById(textareaName).value.length;
+  }
 </script>
 <script type="text/javascript">
-function popup()
-{
-        window.open("../common/caculator.html", "", "toolbar=no,height=800,width=740");
-        return false;
-}
-function popmaterial()
-{
-        window.open("search_material.html", "", "toolbar=no");
-        return false;
-}
+  function popup()
+  {
+    window.open("../common/caculator.html", "", "toolbar=no,height=800,width=740");
+    return false;
+  }
+  function popmaterial()
+  {
+    window.open("search_material.html", "", "toolbar=no");
+    return false;
+  }
 </script>
 
 <script type="text/javascript">
   $("#addMaterialButton").click(function() {
-    var trObj = document.createElement("tr");  
-    trObj.id = new Date().getTime();  
-    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";  
-    $("#tb1").append(trObj);  
+    var trObj = document.createElement("tr");
+    trObj.id = new Date().getTime();
+    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";
+    $("#tb1").append(trObj);
   });
-  function del(obj) {  
-        var trId = obj.parentNode.parentNode.id;  
-        var trObj = document.getElementById(trId);  
-        document.getElementById("tb1").removeChild(trObj);  
-    }
+  function del(obj) {
+    var trId = obj.parentNode.parentNode.id;
+    var trObj = document.getElementById(trId);
+    document.getElementById("tb1").removeChild(trObj);
+  }
 
   $("#addMaterialButton2").click(function() {
-    var trObj = document.createElement("tr");  
-    trObj.id = new Date().getTime();  
-    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del2(this)'></td>";  
-    $("#tb2").append(trObj);  
+    var trObj = document.createElement("tr");
+    trObj.id = new Date().getTime();
+    trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del2(this)'></td>";
+    $("#tb2").append(trObj);
   });
-    function del2(obj) {  
-        var trId = obj.parentNode.parentNode.id;  
-        var trObj = document.getElementById(trId);  
-        document.getElementById("tb2").removeChild(trObj);  
+  function del2(obj) {
+    var trId = obj.parentNode.parentNode.id;
+    var trObj = document.getElementById(trId);
+    document.getElementById("tb2").removeChild(trObj);
+  }
+  /*
+   $("#productForm").formValidation({
+   framework: 'bootstrap',
+   icon: {
+   valid: 'glyphicon glyphicon-ok',
+   invalid: 'glyphicon glyphicon-remove',
+   validating: 'glyphicon glyphicon-refresh'
+   },
+   row: {
+   valid: 'field-success',
+   invalid: 'field-error'
+   },
+   fields: {
+   work_name: {
+   validators: {
+   notEmpty: {
+   message: '作品名字是必需的'
+   },
+   stringLength: {
+   min: 1,
+   max: 50,
+   message: 'The username must be more than 1 and less than 30 characters long'
+   }
+   }
+   },
+   password: {
+   validators: {
+   notEmpty: {
+   message: 'The password is required'
+   }
+   }
+   }
+   }
+   });
+   */
+
+  //$('#imgInp').change(function(){
+
+  //});
+  // Prevent submission if limit is exceeded.
+  $('form').submit(function(){
+    if(this.files.length>10)
+      return false;
+  });
+
+
+  $("#imgInp").change(function(event){
+    var files = event.target.files; //FileList object
+
+    var output = document.getElementById("upload_images");
+    output.innerHTML = "";
+
+    $("#upload_images").css("display", "block");
+
+    if(this.files.length>10) {
+      alert('to many files');
+      document.getElementById("imgInp").value = "";
+      $("#upload_images").empty();
+      $("#upload_images").css("display", "none");
     }
-    /*
-  $("#productForm").formValidation({
-    framework: 'bootstrap',
-    icon: {
-      valid: 'glyphicon glyphicon-ok',
-      invalid: 'glyphicon glyphicon-remove',
-      validating: 'glyphicon glyphicon-refresh'
-    },
-    row: {
-      valid: 'field-success',
-      invalid: 'field-error'
-    },
-    fields: {
-      work_name: {
-        validators: {
-          notEmpty: {
-            message: '作品名字是必需的'
-          },
-          stringLength: {
-            min: 1,
-            max: 50,
-            message: 'The username must be more than 1 and less than 30 characters long'
-          }
-        }
-      },
-      password: {
-        validators: {
-          notEmpty: {
-            message: 'The password is required'
-          }
-        }
+    if(this.files.length==0) {
+      $("#upload_images").css("display", "none");
+    }
+
+    for(var i = 0; i< files.length; i++)
+    {
+
+      var temp = i;
+      var file = files[i];
+      //Only pics
+
+      console.log(file);
+      if(!file.type.match('image'))
+        continue;
+      var picReader = new FileReader();
+      picReader.addEventListener("load",function(event){
+        var picFile = event.target;
+        var li = document.createElement("li");
+        li.innerHTML = "<span class='glyphicon glyphicon-remove' onclick='deleteImg("+temp+")' ></span><img src='" + picFile.result + "'" +
+                "title='" + picFile.name + "' />";
+        output.insertBefore(li,null);
+      });
+      //Read the image
+      picReader.readAsDataURL(file);
+    }
+  });
+
+  function deleteImg(id) {
+    var files = $("#imgInp")[0].files;
+    $("#upload_images").css("display", "none");
+
+    var FileList = {};
+
+    for (var key in files) {
+      if (key != id && key !== "item") {
+        FileList[key] = files[key];
       }
     }
-  });
-  */
+    //$("#imgInp")[0].files = FileList;
+
+    document.getElementById("imgInp").value = "";
+    $("#upload_images").empty();
+
+    console.log($("#imgInp")[0].files);
+    console.log(FileList);
+    //files.remove(id);
+  }
 
 </script>
 
 
- 
-  </body>
+</body>
 </html>
