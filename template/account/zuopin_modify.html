@@ -38,7 +38,7 @@
     #imgInp + label {
       cursor: pointer; /* "hand" cursor */
     }
-    #upload_images {
+    #upload_images, #uploaded_images {
       width: 80%;
       min-width: 400px;
       max-height: 200px;
@@ -50,18 +50,21 @@
       white-space: nowrap;
       display: none;
     }
-    #upload_images li {
+    #uploaded_images {
+      padding: 0px 20px;
+    }
+    #upload_images li, #uploaded_images li {
       display: inline-block;
       vertical-align: middle;
       width: 20%;
       margin: 2px;
     }
-    #upload_images li span {
+    #upload_images li span, #uploaded_images li span {
       float:right;
       color: red;
       margin: 10px 8px -20px 0px;
     }
-    #upload_images li img {
+    #upload_images li img, #uploaded_images li img {
       width: 100%;
     }
   </style>
@@ -138,6 +141,25 @@
                   <input class="btn" type="file" id="imgInp" name="designpicture" accept="image/*" multiple required>
                   <label for="imgInp">Choose a file</label>
                   <div class="type_counter">最多上传10张</div>
+                  <div id="uploaded_images" style="border: black solid 1px; display: block;">
+                    <h6>已上传作品图片</h6>
+                    <li>
+                      <span class="glyphicon glyphicon-remove"></span>
+                      <img src="../../image/test_work01.jpg" title="undefined">
+                    </li>
+                    <li>
+                      <span class="glyphicon glyphicon-remove"></span>
+                      <img src="../../image/test_work02.jpg" title="undefined">
+                    </li>
+                    <li>
+                      <span class="glyphicon glyphicon-remove"></span>
+                      <img src="../../image/test_work03.jpg" title="undefined">
+                    </li>
+                    <li>
+                      <span class="glyphicon glyphicon-remove"></span>
+                      <img src="../../image/test_work04.jpg" title="undefined">
+                    </li>
+                  </div>
                   <div id="upload_images">
                   </div>
                 </td>
