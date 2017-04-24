@@ -40,23 +40,26 @@
     }
     #upload_images, #uploaded_images {
       width: 80%;
-      min-width: 400px;
-      max-height: 200px;
+      min-width: 300px;
+      max-width: 600px;
+      max-height: 180px;
       list-style: none;
-      padding: 20px;
+      padding: 0px 20px;
       overflow: scroll;
       overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
       display: none;
+      border: black solid 1px;
     }
     #uploaded_images {
       padding: 0px 20px;
+      display: block;
     }
     #upload_images li, #uploaded_images li {
       display: inline-block;
       vertical-align: middle;
-      width: 20%;
+      width: 140px;
       margin: 2px;
     }
     #upload_images li span, #uploaded_images li span {
@@ -141,26 +144,28 @@
                   <input class="btn" type="file" id="imgInp" name="designpicture" accept="image/*" multiple required>
                   <label for="imgInp">Choose a file</label>
                   <div class="type_counter">最多上传10张</div>
-                  <div id="uploaded_images" style="border: black solid 1px; display: block;">
-                    <h6>已上传作品图片</h6>
-                    <li>
-                      <span class="glyphicon glyphicon-remove"></span>
-                      <img src="../../image/test_work01.jpg" title="undefined">
-                    </li>
-                    <li>
-                      <span class="glyphicon glyphicon-remove"></span>
-                      <img src="../../image/test_work02.jpg" title="undefined">
-                    </li>
-                    <li>
-                      <span class="glyphicon glyphicon-remove"></span>
-                      <img src="../../image/test_work03.jpg" title="undefined">
-                    </li>
-                    <li>
-                      <span class="glyphicon glyphicon-remove"></span>
-                      <img src="../../image/test_work04.jpg" title="undefined">
-                    </li>
-                  </div>
-                  <div id="upload_images">
+                  <div>
+                    <div id="uploaded_images">
+                      <h6>已上传作品图片</h6>
+                      <li>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <img src="../../image/test_work01.jpg" title="undefined">
+                      </li>
+                      <li>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <img src="../../image/test_work02.jpg" title="undefined">
+                      </li>
+                      <li>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <img src="../../image/test_work03.jpg" title="undefined">
+                      </li>
+                      <li>
+                        <span class="glyphicon glyphicon-remove"></span>
+                        <img src="../../image/test_work04.jpg" title="undefined">
+                      </li>
+                    </div>
+                    <div id="upload_images">
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -291,6 +296,8 @@
       return false;
   });
 
+  $("#upload_images").css("display", "none");
+
   $("#imgInp").change(function(event){
     var files = event.target.files; //FileList object
 
@@ -299,14 +306,19 @@
 
     $("#upload_images").css("display", "block");
 
+    //$("#uploaded_images").css("width", "38%");
+    //$("#upload_images").css("width", "38%");
+
     if(this.files.length>10) {
       alert('to many files');
       document.getElementById("imgInp").value = "";
       $("#upload_images").empty();
       $("#upload_images").css("display", "none");
+      //$("#uploaded_images").css("width", "80%");
     }
     if(this.files.length==0) {
       $("#upload_images").css("display", "none");
+      //$("#uploaded_images").css("width", "80%");
     }
 
     for(var i = 0; i< files.length; i++)
@@ -347,6 +359,8 @@
 
     document.getElementById("imgInp").value = "";
     $("#upload_images").empty();
+
+    //$("#uploaded_images").css("width", "80%");
 
     console.log($("#imgInp")[0].files);
     console.log(FileList);
