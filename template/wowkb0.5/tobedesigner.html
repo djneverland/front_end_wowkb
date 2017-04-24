@@ -238,5 +238,120 @@
         //}
     });
 </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAr7z43-TMU2Ezj3wT5m2S_FTzFnlWiGE&callback=initMap"
+    async defer></script>
+    <script>
+        function toChinese() {
+            $("#trnas1").html("设计师入驻");
+            $("#trnas2").html("设计是产品的核心，WOWKB为设计师搭建了一个展现个人专业与价值的平台，只要您通过培训与考核，就可以成为WOWKB的专业定制设计师");
+            $("#trnas3").html("WOWKB能为您带来什么?");
+            $("#trnas4").html("支持");
+            $("#trnas5").html("免费提供设计软件、模型、作品、物料、供应商、定制服务软件等支持，无需任何成本");
+            $("#trnas6").html("稳定的收入");
+            $("#trnas7").html("我们提供订单支持，您只需提供专业服务就可以有稳定收入");
+            $("#trnas8").html("高效");
+            $("#trnas9").html("强大的技术支持，无需浪费时间与精力，让设计服务简单高效");
+            $("#trnas10").html("申请流程");
+            $("#trnas11").html("在线填写申请表");
+            $("#trnas12").html("业务培训");
+            $("#trnas13").html("我们会安排时间进行业务培训课程");
+            $("#trnas14").html("开通账户");
+            $("#trnas15").html("在作品审核通过后，我们会开通您的设计服务账户");
+            $("#trnas16").html("背景调查");
+            $("#trnas17").html("我们需要确认您的信息完整与真实");
+            $("#trnas18").html("作品审核");
+            $("#trnas19").html("您需要提交至少三个设计作品进行审核");
+            $("#trnas20").html("开始服务");
+            $("#trnas21").html("您可以正式开始接受订单，开始您的设计服务");
+            $("#trnas22").html("如何成为WOWKB的合作设计师？");
+            $("#trnas23").html("为了确保可以提供专业的设计服务，您需要通过严格的专业与背景调查，业务培训和作品审核，才可以成为WOWKB的合作设计师。");
+        }
+
+        function toEnglish() {
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=设计师入驻", function (data) {
+                $("#trnas1").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=设计是产品的核心，WOWKB为设计师搭建了一个展现个人专业与价值的平台，只要您通过培训与考核，就可以成为WOWKB的专业定制设计师", function (data) {
+                $("#trnas2").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=WOWKB能为您带来什么?", function (data) {
+                $("#trnas3").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=支持", function (data) {
+                $("#trnas4").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=免费提供设计软件、模型、作品、物料、供应商、定制服务软件等支持，无需任何成本", function (data) {
+                $("#trnas5").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=稳定的收入", function (data) {
+                $("#trnas6").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=我们提供订单支持，您只需提供专业服务就可以有稳定收入", function (data) {
+                $("#trnas7").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=高效", function (data) {
+                $("#trnas8").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=强大的技术支持，无需浪费时间与精力，让设计服务简单高效", function (data) {
+                $("#trnas9").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=申请流程", function (data) {
+                $("#trnas10").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=在线填写申请表", function (data) {
+                $("#trnas11").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=业务培训", function (data) {
+                $("#trnas12").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=我们会安排时间进行业务培训课程", function (data) {
+                $("#trnas13").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=开通账户", function (data) {
+                $("#trnas14").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=在作品审核通过后，我们会开通您的设计服务账户", function (data) {
+                $("#trnas15").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=背景调查", function (data) {
+                $("#trnas16").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=我们需要确认您的信息完整与真实", function (data) {
+                $("#trnas17").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=作品审核", function (data) {
+                $("#trnas18").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=您需要提交至少三个设计作品进行审核", function (data) {
+                $("#trnas19").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=开始服务", function (data) {
+                $("#trnas20").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=您可以正式开始接受订单，开始您的设计服务", function (data) {
+                $("#trnas21").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=如何成为WOWKB的合作设计师？", function (data) {
+                $("#trnas22").html(data.data.translations[0].translatedText);
+            });
+            $.get("https://translation.googleapis.com/language/translate/v2?key=AIzaSyBnV1ZD_lnZ8eTNoc6FFB0JfFY71T_WN84&source=zh&target=en&q=为了确保可以提供专业的设计服务，您需要通过严格的专业与背景调查，业务培训和作品审核，才可以成为WOWKB的合作设计师。", function (data) {
+                $("#trnas23").html(data.data.translations[0].translatedText);
+            });
+        }
+
+        $( document ).ready( function() {
+            $("#chinese").css("display", "none");
+        });
+        $("#chinese").click(function () {
+            $("#chinese").css("display", "none");
+            $("#english").css("display", "block");
+            toChinese();
+        });
+        $("#english").click(function () {
+            $("#chinese").css("display", "block");
+            $("#english").css("display", "none");
+            toEnglish();
+        });
+    </script>
 </body>
 </html>
