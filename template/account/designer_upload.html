@@ -108,6 +108,7 @@
       <a class="admin_button" href="../account/designer_manage.html">我的作品</a>
       <a class="admin_button" href="../account/designer_manage.html">检索物料</a>
       <a class="admin_button" href="../account/designer_manage.html">我的收藏</a>
+
     </div>
   </div>
 
@@ -236,6 +237,7 @@
       </table>
       <span>&nbsp;</span><input class="submit_button button_left" type="submit" id="submitButton" value="提交"/>
     </form>
+
   </div>
 </div>
 
@@ -295,8 +297,8 @@
 
 <script type="text/javascript">
   $("#addMaterialButton").click(function() {
-    var trObj = document.createElement("tr");
-    trObj.id = new Date().getTime();
+    var trObj = document.createElement("tr");  
+    trObj.id = new Date().getTime();  
     trObj.innerHTML = "<td></td><td><input name='' class='input-field-short' type='text'/><input name='' type='text' class='input-field-short'/>&nbsp;<input type='button' class='addbutton' value='删除'' onclick='del(this)'></td>";
     $("#tb1").append(trObj);
   });

@@ -98,7 +98,7 @@ body{
   padding-bottom: 200px;
   width: 100%;
   background-color: #ebebeb !important;
-  font-family:"Hanyi",Arial,Helvetica,sans-serif,"宋体";
+  font-family:'Avenir LT 45 Book',Arial,Helvetica,sans-serif,"宋体";
 }
 
 li{
@@ -161,6 +161,7 @@ input[type="color"]:focus,
 }
 #body_dash{
    background-color: #ebebeb;
+   position: fixed;
 }
 #container{
    width:1280px;
@@ -169,17 +170,14 @@ input[type="color"]:focus,
    border: 0px solid green;
 }
 #admin_main{
-	display: inline-block;
-	vertical-align: top;
-	margin-top: 52px;
-	min-width: 960px;
-	min-height: 600px;
-	margin-left: 220px;
-	padding-left: 40px;
+	overflow-y:scroll;
+	border: 0px solid red;
+	width: 100vw;
+	height: 100vh;
+	padding-left: 260px;
+	padding-top: 52px;
+/*	padding-left: 40px;*/
 	padding-right: 40px;
-	border: 0px solid grey;
-	border-left: 1px solid #bcbcbc;
-	padding-bottom: 100px;
 }
 #admin_content{
 	border: 0px solid red;
@@ -192,18 +190,13 @@ input[type="color"]:focus,
 /*导航栏 navigation bar*/
 
 #navtop{
-	padding-right: 30px;
+	padding-right: 100px;
 	border: 0px solid red;
 	background-color: rgba(5,5,5,1)
-	/*
-	width:100%;
-	height:52px !important;
-	z-index: 999;
-	*/
 }
 
 #nav_logo{
-	padding-top: 14px;
+	padding-top: 10px;
 	width: 160px;
 	margin-left: 30px;
 	display: inline-block;
@@ -212,35 +205,47 @@ input[type="color"]:focus,
 .nav_option{
   font-size: 14px !important;
   display: inline-block;
-  vertical-align: bottom;
-  text-align: center;
+  vertical-align:top;
+  text-align: center !important;
   color: #fff !important;
-  margin-top: -1px;
+  margin-top: 10px;
+  padding-top: 6px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
   border: 1px solid #fff;
-  width: 30px;
+/*  width: 30px;*/
   height: 30px;
   border-radius: 30px;
-  line-height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .nav_option:hover{
-	color: orange;
+	background-color: #FF6500 !important;
+	border: 1px solid #FF6500;
 }
 .choose{
 	color: #f8a041;
 }
 #nav_sign_signin{
-/*  width: 100px;*/
   height: 30px;
-  line-height: 30px;
   border-radius: 50px;
   display: inline-block;
-  margin-top: -2px;
+  vertical-align: top;
+  margin-top: 10px;
+  padding-top: 6px;
   text-align: center;
   border: 1px solid #FF6500;
   color:#FF6500;
   font-size: 14px;
   padding-left: 14px;
   padding-right: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Avenir LT 45 Book';
+}
+#nav_sign_signin:hover{
+	border: 1px solid #FF7F2A;
+    color:#FF7F2A;
 }
 @media only screen and (max-width: 767px) {
 	.nav_option, #nav_sign_signin{
@@ -277,11 +282,14 @@ input[type="color"]:focus,
 }
 .admin_sidebar{
 	width:220px;
-	margin-top: 61px;
+	height: 100vh;
+	padding-top: 61px;
 	display: inline-block;
 	vertical-align: top;
-	padding-bottom: 50px;
 	position: absolute;
+	background-color: #fff;
+	border-right: 1px solid #ebebeb;
+	box-shadow: 5px 5px 10px 0 rgba(0,0,0,.07);
 	left: 0
 }
 #userPic{
