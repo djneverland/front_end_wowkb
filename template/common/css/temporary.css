@@ -473,7 +473,6 @@
 }
 .page_intro{
 	border: 0px solid red;
-	margin-top: 52px;
 	height: 240px;
 	width: 100%;
 }
@@ -537,7 +536,6 @@
 .pageheader{
 	width: 100%;
 	height: 240px;
-	margin-top: 20px;
 }
 .pageheader_bg{
 	width: 100%;
@@ -1275,7 +1273,7 @@
 	padding-top: 20px;
 	font-family: 'Microsoft YaHei';
 }
-.type_counter{
+.upload_form tr td .type_counter{
 	font-size: 12px;
 	color: #afafaf;
 	margin-left: 0px;
