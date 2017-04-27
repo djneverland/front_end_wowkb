@@ -1,334 +1,573 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wow Kitchen & Bath</title>
-  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
-  <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
-  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
-  <link rel="stylesheet" type="text/css" href="search.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wow Kitchen & Bath</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/99d52acf31.js"></script>
 </head>
 <body>
 <nav id="navtop" role="navigation" class="navbar navbar-fixed-top navbar-inverse">
     <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a  id="nav_logo" href="designs.html" class="navbar-brand">
-                <img id="nav_logo_pic" src="../../image/logo4.png">
-            </a>
-        </div>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
-                <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>               
-            </ul>
-        </div>
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a  id="nav_logo" href="designs.html" class="navbar-brand">
+            <img id="nav_logo_pic" src="../../image/logo4.png">
+        </a>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
+            <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>
+        </ul>
+    </div>
 </nav>
 
 <div id="showArea">
-  <div class="search_slogan big_title">
-    <span class="slogan_top">We Design</span>
-    </br>Your Dream Kitchen
+    <div class="search_slogan big_title">
+        <span class="slogan_top">We Design</span>
+        </br>Your Dream Kitchen
 
-    <div class="index_search">
-      <form>
-        <input class="search_text" type="text">
-        <input class="search_button" type="button" value="Search">
-        <div class="search_drop"></div>
-      </form>   
+        <div id="index_search">
+            <div class="row" id="search_option">
+                <div class="col col-sm-4 selected" id="search_option_design">
+                    <h4>Find Design</h4><hr id="design_option_underline" style="opacity: 1;">
+                </div>
+                <div class="col col-sm-4" id="search_option_constructor">
+                    <h4>Find Constructor</h4><hr id="constructor_option_underline">
+                </div>
+                <div class="col col-sm-4" id="search_option_material">
+                    <h4>Find Material</h4><hr id="material_option_underline">
+                </div>
+            </div>
+            <form onkeypress="return event.keyCode != 13;">
+                <ul class="search_box">
+                    <!--
+                    <li class="added_option">中世纪风格<span class="glyphicon glyphicon-remove"></span></li>
+                    <li class="added_option">现代风格<span class="glyphicon glyphicon-remove"></span></li>
+                    -->
+                    <li id="last_search_item"><input class="search_text" id="search_input" type="text"></li>
+                </ul>
+                <input class="search_button" type="button" value="Search">
+                <div class="search_drop" id="search_designer_drop">
+                    <span class="glyphicon glyphicon-remove close_drop"></span>
+                    <h3>作品风格</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="designer_option_1_1">中世纪风格</span>
+                        <span class="drop_option" id="designer_option_1_2">现代风格</span>
+                        <span class="drop_option" id="designer_option_1_3">艺术装饰风格</span>
+                        <span class="drop_option" id="designer_option_1_4">极简主义风格</span>
+                        <span class="drop_option" id="designer_option_1_5">传统风格</span>
+                        <span class="drop_option" id="designer_option_1_6">中式风格</span>
+                        <span class="drop_option" id="designer_option_1_7">日式风格</span>
+                        <span class="drop_option" id="designer_option_1_8">斯坦的纳威亚</span>
+                        <span class="drop_option" id="designer_option_1_9">乡村风格</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <hr>
+                    <h3>专业领域</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="designer_option_2_1">家居设计</span>
+                        <span class="drop_option" id="designer_option_2_2">室内装修</span>
+                        <span class="drop_option" id="designer_option_2_3">空间规划</span>
+                        <span class="drop_option" id="designer_option_2_4">景观设计</span>
+                        <span class="drop_option" id="designer_option_2_5">林园设计</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <hr>
+                    <h3>设计师推荐</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="designer_option_3_1">James</span>
+                        <span class="drop_option" id="designer_option_3_2">Andy</span>
+                        <span class="drop_option" id="designer_option_3_3">Sarah</span>
+                        <span class="drop_option" id="designer_option_3_4">Jack</span>
+                        <span class="drop_option" id="designer_option_3_5">Tom</span>
+                        <span class="drop_option" id="designer_option_3_6">Jennifer</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <btton class="btn btn-sm close_drop">确定</btton>
+                </div>
+                <div class="search_drop" id="search_constructor_drop">
+                    <span class="glyphicon glyphicon-remove close_drop"></span>
+                    <h3>服务项目</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="constructor_option_1_1">装修</span>
+                        <span class="drop_option" id="constructor_option_1_2">地板</span>
+                        <span class="drop_option" id="constructor_option_1_3">水电工程</span>
+                        <span class="drop_option" id="constructor_option_1_4">改建</span>
+                        <span class="drop_option" id="constructor_option_1_5">油漆</span>
+                        <span class="drop_option" id="constructor_option_1_6">翻新</span>
+                        <span class="drop_option" id="constructor_option_1_7">车库隔间</span>
+                        <span class="drop_option" id="constructor_option_1_8">屋顶</span>
+                        <span class="drop_option" id="constructor_option_1_9">浴室</span>
+                        <span class="drop_option" id="constructor_option_1_10">水暖空调</span>
+                        <span class="drop_option" id="constructor_option_1_11">园艺</span>
+                        <span class="drop_option" id="constructor_option_1_12">照明设备</span>
+                        <span class="drop_option" id="constructor_option_1_13">墙绘</span>
+                        <span class="drop_option" id="constructor_option_1_14">瓷砖</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <hr>
+                    <h3>服务区域</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="constructor_option_2_1">湾区</span>
+                        <span class="drop_option" id="constructor_option_2_2">旧金山</span>
+                        <span class="drop_option" id="constructor_option_2_3">洛杉矶</span>
+                        <span class="drop_option" id="constructor_option_2_4">San Jose</span>
+                        <span class="drop_option" id="constructor_option_2_5">Mountain View</span>
+                        <span class="drop_option" id="constructor_option_2_6">Fremont</span>
+                        <span class="drop_option" id="constructor_option_2_7">Milpitas</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <btton class="btn btn-sm close_drop">确定</btton>
+                </div>
+                <div class="search_drop" id="search_material_drop">
+                    <span class="glyphicon glyphicon-remove close_drop"></span>
+                    <h3>品类</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="material_option_1_1">木头</span>
+                        <span class="drop_option" id="material_option_1_2">樱桃木</span>
+                        <span class="drop_option" id="material_option_1_3">枫木</span>
+                        <span class="drop_option" id="material_option_1_4">橡木</span>
+                        <span class="drop_option" id="material_option_1_5">松木</span>
+                        <span class="drop_option" id="material_option_1_6">核桃木</span>
+                        <span class="drop_option" id="material_option_1_7">彩绘面漆</span>
+                        <span class="drop_option" id="material_option_1_8">染色面漆</span>
+                        <span class="drop_option" id="material_option_1_9">喷油面漆</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <hr>
+                    <h3>材料颜色</h3>
+                    <div class="drop_options">
+                        <span class="drop_option" id="material_option_2_1">白色</span>
+                        <span class="drop_option" id="material_option_2_2">黑色</span>
+                        <span class="drop_option" id="material_option_2_3">浅色</span>
+                        <span class="drop_option" id="material_option_2_4">深色</span>
+                        <span class="drop_option" id="material_option_2_5">棕色</span>
+                        <span class="drop_option" id="material_option_2_6">灰色</span>
+                        <span class="drop_option" id="material_option_2_7">奶白色</span>
+                        <span class="drop_option" id="material_option_2_8">蓝色</span>
+                        <span class="drop_option" id="material_option_2_9">红色</span>
+                        <span class="drop_option" id="material_option_2_10">绿色</span>
+                        <span class="drop_multiple">多选</span>
+                    </div>
+                    <btton class="btn btn-sm close_drop">确定</btton>
+                </div>
+            </form>
+        </div>
+
+        <a href="#index_body"><div class="header_start"><i class="fa fa-angle-down" aria-hidden="true"></i></div></a>
     </div>
-    
-    <a href="#index_body"><div class="header_start"><i class="fa fa-angle-down" aria-hidden="true"></i></div></a>
-  </div>
-  <div class="showArea_bg"></div>
-  <img id="showArea_pic" src="../../image/headerPic.jpg">
+    <div class="showArea_bg"></div>
+    <img id="showArea_pic" src="../../image/headerPic.jpg">
 </div>
 
 
 <div id="index_body">
-  <div class="project_title_blank"></div>
-  
-  <div class="temp_mainArea">  
- <div class="project_title_blank">
-    <div class="gap_content_each">
-      <img class="index_icon" src="../../image/index_icon2.png">
-      <div><h4>Professional design</h4>Seen the real effect of the extremely large amounts of designs.</div>
-    </div>
-    <div class="gap_content_each">
-      <img class="index_icon" src="../../image/index_icon4.png">
-      <div><h4>Real Products</h4>All the products and commodities in our designs can be bought.</div>
-    </div>
-    <div class="gap_content_each">
-      <img class="index_icon" src="../../image/index_icon3.png">
-      <div><h4>Best Service</h4>We provide great design services with the full refund guarantee if you are not satisfied.</div>
-    </div>
-  </div>
-  <div class="project_title_blank"></div>
 
-  <div class="index_project_title project_title_blank">
-    <div class="index_title">NEW PROJECTS</div>
-<!--     <span class="project_title_category">家居设计</span>
-   <span class="project_title_category">空间设计</span>
-   <span class="project_title_category">装修设计</span> -->
-    <a href="" class="more_design">More</a>
-  </div> 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/A7/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜</div>
-          </div>
-        </div>
-      </a>
-       
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="des0igns_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/CO66/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜</div>
-          </div>
-        </div>
-      </a>
+    <div class="project_title_blank"></div>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/J5/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
+    <div class="temp_mainArea">
+        <div class="project_title_blank">
+            <div class="gap_content_each">
+                <img class="index_icon" src="../../image/index_icon2.png">
+                <div><h4>Professional design</h4>Seen the real effect of the extremely large amounts of designs.</div>
+            </div>
+            <div class="gap_content_each">
+                <img class="index_icon" src="../../image/index_icon4.png">
+                <div><h4>Real Products</h4>All the products and commodities in our designs can be bought.</div>
+            </div>
+            <div class="gap_content_each">
+                <img class="index_icon" src="../../image/index_icon3.png">
+                <div><h4>Best Service</h4>We provide great design services with the full refund guarantee if you are not satisfied.</div>
+            </div>
         </div>
-      </a>
-   
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/K3/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <div class="project_title_blank"></div>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S2/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
+        <div class="index_project_title project_title_blank">
+            <div class="index_title">NEW PROJECTS</div>
+            <!--     <span class="project_title_category">家居设计</span>
+               <span class="project_title_category">空间设计</span>
+               <span class="project_title_category">装修设计</span> -->
+            <a href="" class="more_design">More</a>
         </div>
-      </a>
-       
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S1/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/A7/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜</div>
+                </div>
+            </div>
+        </a>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S8/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
-   
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/M01/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="des0igns_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/CO66/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜</div>
+                </div>
+            </div>
+        </a>
 
- <div class="index_project_title project_title_blank">
-    <div class="index_title">HOT PROJECTS</div>
-<!--    <span class="project_title_category">橱柜</span>
-   <span class="project_title_category">台面</span>
-   <span class="project_title_category">油漆</span>
-   <span class="project_title_category">电器</span>
-   <span class="project_title_category">地板</span>
-   <span class="project_title_category">墙砖</span>
-   <span class="project_title_category">门窗</span> -->
-    <a href="" class="more_design">More</a>
-  </div>
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/K8/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/J5/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/K3/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S2/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S1/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S8/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/M01/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <div class="index_project_title project_title_blank">
+            <div class="index_title">HOT PROJECTS</div>
+            <!--    <span class="project_title_category">橱柜</span>
+               <span class="project_title_category">台面</span>
+               <span class="project_title_category">油漆</span>
+               <span class="project_title_category">电器</span>
+               <span class="project_title_category">地板</span>
+               <span class="project_title_category">墙砖</span>
+               <span class="project_title_category">门窗</span> -->
+            <a href="" class="more_design">More</a>
         </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/K8/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/K10/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/K10/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/M01/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">欧式奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S1/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
+
+
+
+        <div class="index_project_title project_title_blank">
+            <div class="index_title">PICKED PROJECTS</div>
+            <span class="project_title_category">Modern Style</span>
+            <span class="project_title_category">Minimalism Style</span>
+            <span class="project_title_category">Mid-century Modern Style</span>
+            <span class="project_title_category">Country Style</span>
+            <span class="project_title_category">Traditional Style</span>
+            <span class="project_title_category">Art Deco Style</span>
+            <a href="" class="more_design">More</a>
         </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S2/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/M01/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">欧式奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/S8/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
 
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S1/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/K3/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
 
-
-
- <div class="index_project_title project_title_blank">
-  <div class="index_title">PICKED PROJECTS</div>
-   <span class="project_title_category">Modern Style</span>
-   <span class="project_title_category">Minimalism Style</span>
-   <span class="project_title_category">Mid-century Modern Style</span>
-   <span class="project_title_category">Country Style</span>
-   <span class="project_title_category">Traditional Style</span>
-   <span class="project_title_category">Art Deco Style</span>
-   <a href="" class="more_design">More</a>
-  </div>
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S2/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/S8/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/K3/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
-
-      <a href="design_detail.html">
-        <div class="designs_project">
-          <div class="designs_project_pic">
-            <img class="designs_project_pic" src="../../image/customize/CO66/design.jpg">
-          </div>
-          <div class="project_collect_intro">
-            <div class="admin_collect_title">奶油色枫木橱柜定制</div>
-          </div>
-        </div>
-      </a>
+        <a href="design_detail.html">
+            <div class="designs_project">
+                <div class="designs_project_pic">
+                    <img class="designs_project_pic" src="../../image/customize/CO66/design.jpg">
+                </div>
+                <div class="project_collect_intro">
+                    <div class="admin_collect_title">奶油色枫木橱柜定制</div>
+                </div>
+            </div>
+        </a>
     </div>
 </div><!-- body -->
 
 </div>
 <div id="bottombar">
     <div class="bottom_content">
-      <div class="bottom_link">
-        <div class="bottom_link_line">
-          <ul class="bottom_list">
-            <li><strong>ABOUT US</strong></li>
-            <li>Projects</li>
-            <li>Services</li>
-            <li>Career</li>
-            <li>Terms</li>
-            <li>Privacy</li>
-            <li>Copyright</li>
-          </ul>
+        <div class="bottom_link">
+            <div class="bottom_link_line">
+                <ul class="bottom_list">
+                    <li><strong>ABOUT US</strong></li>
+                    <li>Projects</li>
+                    <li>Services</li>
+                    <li>Career</li>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                    <li>Copyright</li>
+                </ul>
+            </div>
+            <div class="bottom_blank"></div>
+            <div class="bottom_link_line">
+                <ul class="bottom_list">
+                    <li><strong>PARTNERSHIP</strong></li>
+                    <li>Designer</li>
+                    <li>Product</li>
+                    <li>Service</li>
+                </ul>
+            </div>
+            <div class="bottom_blank"></div>
+            <div class="bottom_link_line">
+                <ul class="bottom_list">
+                    <li><strong>CONTACT US</strong></li>
+                    <li>customerservice@wowkb.com</li>
+                    <li>Office Hour: 10:00a.m. - 7:00p.m.</li>
+                    <li>97 E Brokaw Rd, #310, San Jose, CA 95112</li>
+                </ul>
+            </div>
+            <div class="bottom_blank"></div>
+            <div class="bottom_link_line">
+                <ul class="bottom_list">
+                    <li><i class="fa fa-facebook fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-instagram fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-twitter fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-linkedin fa-lg icon_bottom" aria-hidden="true"></i>
+                    </li>
+                    <li><div class="sharethis-inline-share-buttons"></div></li>
+                </ul>
+            </div>
         </div>
-        <div class="bottom_blank"></div>
-        <div class="bottom_link_line">
-          <ul class="bottom_list">          
-            <li><strong>PARTNERSHIP</strong></li>
-            <li>Designer</li>
-            <li>Product</li>
-            <li>Service</li>      
-          </ul>
-        </div>
-        <div class="bottom_blank"></div>
-        <div class="bottom_link_line">
-          <ul class="bottom_list">          
-            <li><strong>CONTACT US</strong></li>
-            <li>customerservice@wowkb.com</li>
-            <li>Office Hour: 10:00a.m. - 7:00p.m.</li>
-            <li>97 E Brokaw Rd, #310, San Jose, CA 95112</li>
-          </ul>
-        </div>
-        <div class="bottom_blank"></div>
-        <div class="bottom_link_line">
-          <ul class="bottom_list">
-            <li><i class="fa fa-facebook fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-instagram fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-twitter fa-lg icon_bottom" aria-hidden="true"></i><i class="fa fa-linkedin fa-lg icon_bottom" aria-hidden="true"></i>
-            </li>
-            <li><div class="sharethis-inline-share-buttons"></div></li>
-          </ul>
-        </div>
-      </div>
     </div>
 </div>
+<script>
+    var count_search_item = 0;
+
+    $(document).on("keypress", "form", function(event) {
+        if(event.keyCode == 11) {
+            if ($("#search_input").val()) {
+                if($( ".search_box li" ).length  < 5) {
+
+                    $('<li class="added_option" id="search_item_' + count_search_item + '">' + $("#search_input").val() + '<span class="glyphicon glyphicon-remove" onclick="deleteSearchItem(' + count_search_item + ')"></span></li>').insertBefore("#last_search_item");
+
+                    count_search_item--;
+
+                    $("#last_search_item").width($("#last_search_item").width() - $("#search_item_" + count_search_item).width() - 20);
+
+                }
+                $("#search_input").val("");
+            }
+        }
+    });
+
+    $("#search_option_designs").mouseover(function() {
+        $("#design_option_underline").css("opacity", "0");
+    }).mouseout(function() {
+        if(!$( "#search_option_design" ).hasClass( "selected" )) {
+            $("#design_option_underline").css("opacity", "0");
+        }
+    });
+    $("#search_option_constructor").mouseover(function() {
+        $("#constructor_option_underline").css("opacity", "1");
+    }).mouseout(function() {
+        if(!$( "#search_option_constructor" ).hasClass( "selected" )) {
+            $("#constructor_option_underline").css("opacity", "0");
+        }
+    });
+    $("#search_option_material").mouseover(function() {
+        $("#material_option_underline").css("opacity", "1");
+    }).mouseout(function() {
+        if(!$( "#search_option_material" ).hasClass( "selected" )) {
+            $("#material_option_underline").css("opacity", "0");
+        }
+    });
+
+    $("#search_option_designs").click(function() {
+        removeOptionClasses();
+
+        $("#search_option_constructor").removeClass("selected");
+        $("#search_option_material").removeClass("selected");
+
+        $("#constructor_option_underline").css("opacity", "1");
+        $("#material_option_underline").css("opacity", "1");
+
+        $("#search_option_design").addClass( "selected" );
+        $("#design_option_underline").css("opacity", "1");
+    });
+    $("#search_option_constructors").click(function() {
+        removeOptionClasses();
+
+        $("#search_option_design").removeClass("selected");
+        $("#search_option_material").removeClass("selected");
+
+        $("#design_option_underline").css("opacity", "1");
+        $("#material_option_underline").css("opacity", "1");
+
+        $("#search_option_constructor").addClass( "selected" );
+        $("#constructor_option_underline").css("opacity", "1");
+    });
+    $("#search_option_materials").click(function() {
+        removeOptionClasses();
+
+        $("#search_option_design").removeClass("selected");
+        $("#search_option_constructor").removeClass("selected");
+
+        $("#design_option_underline").css("opacity", "1");
+        $("#constructor_option_underline").css("opacity", "1");
+
+        $("#search_option_material").addClass( "selected" );
+        $("#material_option_underline").css("opacity", "1");
+    });
+
+    $(document).bind('click', function() {
+        if(!$(e.target).closest("#index_search").length === 1) {
+            removeOptionClass();
+        }
+    });
+
+    $( "#search_outputs" ).focus(function() {
+        if($( "#search_options_design" ).hasClass( "select" )) {
+            $("#search_designer_drop").css("display", "block");
+        } else if($( "#search_options_constructor" ).hasClass( "select" )) {
+            $("#search_constructor_drop").css("display", "block");
+        } else if($( "#search_options_material" ).hasClass( "select" )) {
+            $("#search_material_drop").css("display", "block");
+        }
+    });
+
+    $(".close_drops").click(function() {
+        removeOptionClass();
+    });
+
+    $(".drop_options").click(function () {
+        if($( ".search_box li" ).length  < 6) {
+            $('<li class="added_option" id="search_item_' + count_search_item + '">' + $("#" + event.target.id).text() + '<span class="glyphicon glyphicon-remove" onclick="deleteSearchItem(' + count_search_item + ')"></span></li>').insertBefore("#last_search_item");
+            $("#last_search_item").width($("#last_search_item").width() - $("#search_item_" + count_search_item).width() - 20);
+        }
+    });
+
+    function removeClass() {
+        $("#search_drop").css("display", "none");
+        $("#search_constructor_drop").css("display", "block");
+        $("#search_material_drop").css("display", "none");
+    }
+
+    function deleteItems() {
+        $("#last_items").width($("#last_item").width() + $('#search_item_'+id).width() + 20);
+        $('#search_item).remove();
+    }
+</script>
+<script src="https://firebasestorage.googleapis.com/v0/b/libraries-320b2.appspot.com/o/index2%2Fjquery_search_box_support.js?alt=media&token=7769c016-f311-411d-b150-da2e1896796a"></script>
 </body>
 </html>
 

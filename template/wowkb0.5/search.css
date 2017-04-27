@@ -1,20 +1,38 @@
-
-.index_search{
+#index_search{
 	width: 50%;
 	height: 200px;
-	border: 1px solid red;
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 0;
 }
-.index_search input{
+#index_search #search_option div {
+	color: #afafaf;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#index_search #search_option div hr {
+	width: 80%;
+	opacity: 0;
+	border: 0;
+	border-top: 5px solid orange;
+	margin-top: 0;
+}
+#index_search #search_option div:hover {
+	color: white;
+}
+#index_search #search_option .selected {
+	color: white;
+}
+#index_search input{
 	display: inline-block;
 	vertical-align: top;
+	font-size: 1.5em;
+	width: 100%;
 }
-.index_search .search_text{
+.search_box {
 	width: 50%;
 	height: 40px;
-	font-size: 16px;
+	font-size: 12px;
 	position: absolute;
 	right: 0;
 	left: 0;
@@ -22,15 +40,45 @@
 	margin-right: auto;
 	border-radius: 40px;
 	color: #afafaf;
-	border: 0px solid red;
-	padding-left: 30px;
 	background: white url("http://cssdeck.com/uploads/media/items/5/5JuDgOa.png") 13px 13px no-repeat;
+
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 2px 4px;
+	padding-left: 30px;
+	color: black;
+
+	overflow:hidden;
+
+	white-space:nowrap;
 }
-.index_search .search_text:focus{
+#last_search_item {
+	width: 100%;
+}
+#index_search .search_text:focus{
 	outline: none;
 	box-shadow: none;
 }
-.index_search .search_button{
+.search_box li {
+	display: inline-block;
+	list-style: none;
+	float: left;
+}
+.search_box .added_option {
+	margin-top: 8px;
+	padding: 3px 4px;
+	background-color: lightgrey;
+	border-radius: 10px;
+	max-width: 130px;
+}
+#search_input {
+	margin-left: 2px;
+}
+.search_box input {
+	background: none;
+	border: none;
+}
+#index_search .search_button{
 	width: 80px;
 	height: 40px;
 	font-size: 16px;
@@ -42,19 +90,64 @@
 	background-color: orange;
 	display: block;
 }
-.index_search .search_drop{
+#index_search .search_drop{
 	display: none;
 	width: 50%;
-	height: 40vh;
-	background-color: #fff;
-	border: 0px solid green;
+	min-height: 120px;
+	background-color: rgba(255,255,255,0.9);
+	opacity: 0.8;
 	position: absolute;
 	margin-top: 50px;
 	border-radius: 8px;
+	padding: 20px;
+	padding-top: 5px;
+	color: black;
+	text-align: left;
+	z-index: 10;
 }
-.index_search .search_button:focus + .search_drop{
-	display: block;
+#index_search .search_drop .close_drop{
+	color: grey;
+	float: right;
+	font-size: 0.2em;
+	cursor: pointer;
 }
-
+#index_search .search_drop h3{
+	font-size: small;
+	color: royalblue;
+}
+#index_search .search_drop .drop_options {
+	min-height: 30px;
+	margin-bottom: 10px;
+	font-size: 0.2em;
+}
+#index_search .search_drop .drop_options .drop_option{
+	color: black;
+	float: left;
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-left: 0;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+#index_search .search_drop .drop_options .drop_multiple{
+	float: left;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 0;
+	margin-bottom: 10px;
+	cursor: pointer;
+	color: grey;
+}
+#index_search .search_drop hr{
+	width: 100%;
+	border: 0;
+	border-top: 2px dashed lightgrey;
+}
+#index_search .search_drop .btn{
+	background-color: rgba(255,165,0,1);
+	float: right;
+	opacity: 1;
+}
 
 
