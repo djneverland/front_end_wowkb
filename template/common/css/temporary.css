@@ -168,6 +168,21 @@
 	font-size: 30px;
 	color: orange;
 }
+@media only screen and (max-device-width: 780px) {
+	.header_subtitle{
+		width:60%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5vh;
+		font-size: 22px;
+		color: #ebebeb;
+		line-height: 1.4;
+		font-family: 'PingFang ExtraLight';
+	}
+	.header_start {
+		margin-top: 5vh;
+	}
+}
 #show{
   background-size:cover;
   position:relative;
