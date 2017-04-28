@@ -111,13 +111,12 @@
             </div>
         </a>
         <a href="#" onclick="list()" class="inline">
-            <div class="button" id="button_list">
+            <div class="button"  id="button_list">
                 <!-- <i class="fa fa-cube" aria-hidden="true"></i> -->
                 <img class="side_button_icon" src="../../image/detail_icon3.png">
                 Products
             </div>
         </a>
-
         <a href="#" onclick="relate_works()" class="inline">
             <div class="button" id="button_relate_works">
                 <!-- <i class="fa fa-tags" aria-hidden="true"></i> -->
@@ -525,6 +524,65 @@
         }
     });
 
+    $("#button_designers").mouseenter(function() {
+        show();
+        button_designer.className = "choose_button top_buttn";
+        button_intro.className = "buttn";
+        button_list.className = "buttn";
+        button_relate_works.className = "buttn";
+
+        page_designer.style.display = "none";
+        page_intro.style.display = "none";
+        page_list.style.display = "none";
+        page_relate_works.style.display = "none";
+    });
+
+    $("#button_intros").mouseenter(function() {
+        button_designers.className = "button top_buttn";
+        button_intros.className = "choose_buttn";
+        button_lists.className = "button";
+        button_relates_works.className = "buttn";
+
+        page_designers.style.display = "none";
+        page_intros.style.display = "none";
+        page_lists.style.display = "none";
+        page_relate_work.style.display = "none";
+    });
+
+    $("#button_lists").mouseenter(function() {
+        show();
+
+        button_designers.className = "button top_button";
+        button_intros.className = "button";
+        button_lists.className = "choose_button";
+        button_relate_work.className = "button";
+
+        page_designers.style.display = "none";
+        page_intros.style.display = "none";
+        page_lists.style.display = "block";
+        page_relate_work.style.display = "none";
+    });
+
+    $("#button_relate").mouseenter(function() {
+        show();
+
+        button_designers.className = "button top_button";
+        button_intros.className = "button";
+        button_lists.className = "button";
+        button_relate_work.className = "choose_top_button";
+
+        page_designers.style.display = "none";
+        page_intros.style.display = "none";
+        page_lists.style.display = "none";
+        page_relate_work.style.display = "none";
+    });
+
+    $("#shares").mouseenter(function() {
+        $("#top_share_button").fadeOut("3000", function () {
+            $("#top_share_button").removeClass("hide").addClass("show");
+        });
+    });
+
     $( window ).resize(function() {
         if($('#screen_test').css('display')!='none') {
             $("#header").width($(window).width() - 84);
@@ -599,7 +657,7 @@
     });
 
 </script>
-<script src="https://firebasestorage.googleapis.com/v0/b/libraries-320b2.appspot.com/o/design_detail%2Fjquery_style_support.js?alt=media&token=1b24e918-18cd-40f2-b601-b6d87cf55d76"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/libraries-320b2.appspot.com/o/design_detail%2Fjquery_style_support.js?alt=media&token=06f30fa8-5d22-4a1d-8689-9c226d8bff78"></script>
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
