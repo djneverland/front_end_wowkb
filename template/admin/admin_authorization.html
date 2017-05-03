@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Kitchen & Bath</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+</head>
+<body>
+<nav id="navtop" role="navigation" class="navbar navbar-fixed-top navbar-inverse">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a  id="nav_logo" href="designs.html" class="navbar-brand">
+                <img id="nav_logo_pic" src="../../image/logo4.png">
+            </a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><div id="nav_sign_signin">TO BE OUR DESIGNER</div></a></li>
+                <li><a href="#"><div class="nav_option"><i class="fa fa-user" aria-hidden="true"></i></div></a></li>               
+            </ul>
+        </div>
+</nav>
+
+<div id="body_dash">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+    <div id="admin" class="admin_sidebar">
+    <div id="userPic">
+      <img src="../../image/head.png">
+    </div>
+    <div id="userName">Sarah</div>
+    <div id="userTitle">管理员</div>
+
+    <div id="admin_sidebar_gapline"></div>
+
+    <div id="admin_menu">
+      <a class="admin_button choose" href="../admin/admin_dashboard.html">网站状态</a>
+      <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>认证申请</a>
+      <a class="admin_button" href="../account/designer_manage.html">权限管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
+    </div>    
+</div>
+
+  <div id="admin_main">
+    <div class="dash_top">
+      <span class="dash_top_button" id="button_user">审核用户</span>
+      <span class="dash_unchoose" id="button_design">审核作品</span>
+    </div>
+      
+    <div id="admin_content">
+      <div id="authorize_user">
+      <table id="dashList">
+        <tr>
+          <th>用户名</th>
+          <th>用户类型</th>
+          <th>邮箱</th>
+          <th>注册时间</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>James</td>
+          <td>用户</td>
+          <td>James@gmail.com</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="pass" href="#">通过</a>
+            </br>
+            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Sarah</td>
+          <td>设计师</td>
+          <td>Sarah@gmail.com</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="pass" href="#">通过</a>
+            </br>
+            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div id="authorize_design">
+      <table id="dashList">
+        <tr>
+          <th>图片</th>
+          <th>作品名称</th>
+          <th>作品风格</th>
+          <th>设计师</th>
+          <th>上传时间</th>
+          <th></th>
+        </tr>
+        <tr >
+          <td><img id="design_pic" src="../../image/customize/A7/design.jpg"></td>   
+          <td>Sunshine Kitchen</td>
+          <td>Chinese Style</td>
+          <td>James</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="pass" href="#">通过</a>
+            </br>
+            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
+          </td>
+        </tr>
+        <tr>
+          <td><img id="design_pic" src="../../image/customize/k3/design.jpg"></td>
+          <td>Favorite Kitchen</td>
+          <td>Traditional style</td>
+          <td>Sarah</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="pass" href="#">通过</a>
+            </br>
+            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    </div><!--admin_content-->
+
+
+
+
+  </div>
+</div>
+<script type="text/javascript">
+var user = document.getElementById('button_user');
+var design = document.getElementById('button_design');
+var user_page = document.getElementById('authorize_user');
+var design_page = document.getElementById('authorize_design');
+
+user.onclick = function(){
+  user.className = "dash_top_button";
+  design.className = "dash_unchoose";
+  user_page.style.display = "block";
+  design_page.style.display = "none";
+}
+design.onclick = function(){
+  design.className = "dash_top_button";
+  user.className = "dash_unchoose";
+  design_page.style.display = "block";
+  user_page.style.display = "none";
+}
+</script>
+</body>
+</html>

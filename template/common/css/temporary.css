@@ -157,7 +157,8 @@
 }
 @media screen and (max-width: 781px) {
   .header_subtitle {
-    width: 80%;
+  	margin-top: 2vh;
+    width: 78%;
   }
 }
 .header_start{
@@ -296,6 +297,47 @@
   margin-right: auto;
   text-align: left;
 }
+.supplier_logo{
+	width: 80%;
+	text-align: center;
+	height: 500px;
+	border:0px solid red;
+	margin-left: auto;
+	margin-right: auto;
+}
+.readmore{
+	margin-top: 20px;
+}
+.each_logo{
+/*	border: 1px solid green;*/
+	width: 420px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 40px;
+}
+.logo_description{
+	margin-top: 10px;
+	text-align: left;
+	padding: 10px;
+	line-height: 1.6;
+}
+.each_logo .haus img{
+	padding-top: 15%;
+	padding-bottom: 14%;
+}
+.logo_img{
+	background-color: #fff;
+	padding: 40px;
+	height: 260px;
+	text-align: center;
+	border: 1px solid #d5d5d5;
+}
+.logo_img img{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
 .index_logo{
 	margin: 0;
 	padding: 0;
@@ -310,10 +352,10 @@
 .index_logo li{
   display: inline-block;
   vertical-align: top;
-  margin:20px;
+  margin:50px;
   background-color: #fff;
   border: 1px solid #d5d5d5;
-  width: 250px;
+  width: 320px;
   padding-top: 20px;
   padding-bottom: 16px;
 }
@@ -991,6 +1033,12 @@
 .aboutus_intro{
 	margin-top: 100px;
 }
+.aboutus_intro h3{
+	font-family: 'Avenir LT 95 Black';
+}
+.aboutus_intro p{
+	font-size: 14px;
+}
 .aboutus_intro,.contact_info{
 	width: 80%;
 	margin-left: auto;
@@ -1408,6 +1456,12 @@
 	vertical-align: top;
 	font-size: 14px;
 	width: 33%;
+	min-width: 240px;
+	margin-bottom: 20px;
+}
+.gap_content_each h4{
+	font-family: 'Avenir LT 95 Black';
+	font-size: 20px;
 }
 .index_gap_content img{
 	width: 50%;
