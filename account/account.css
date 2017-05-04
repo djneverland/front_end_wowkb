@@ -897,7 +897,7 @@ label.dropdown:after {
 	border: 0px solid blue;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.06), 0 2px 2px rgba(0,0,0,0.03);
 }
-.each_material{
+/*.each_material{
 	width: 240px;
 	height: 270px;
 	background-color: #fff;
@@ -907,7 +907,7 @@ label.dropdown:after {
 	vertical-align: top;
 	border: 0px solid blue;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.06), 0 2px 2px rgba(0,0,0,0.03);
-}
+}*/
 .sys_catogory{
 	font-size: 12px;
 	color: #afafaf;
@@ -916,29 +916,29 @@ label.dropdown:after {
 	font-size: 12px;
 	color: orange;
 }
-.each_materil_pic{
+/*.each_materil_pic{
 	height: 210px;
 	border: 0px solid red;
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 .model_pic{
 	border: 0px solid red;
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
 }
-.material_pic{
+/*.material_pic{
 	border: 0px solid red;
 	max-height:210px; 
 	margin-left: auto;
 	margin-right: auto;
-}
-.material_info{
+}*/
+/*.material_info{
 	width: 100%;
 	font-size: 14px;
 	margin-top: 6px;
-}
+}*/
 .model_info{
 	width: 100%;
 	font-size: 14px;
@@ -1028,4 +1028,16 @@ label.dropdown:after {
 .button_left{
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+.search_material_table tr th{
+	text-align: center;
+}
+.search_material_table tr td{
+	text-align: center;
+}
+.search_material_table tr td .material_pic{
+	width: 200px;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WOWKB</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wow Kitchen & Bath</title>
   <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
   <link rel="stylesheet" type="text/css" href="../common/css/common.css">
   <link rel="stylesheet" type="text/css" href="../../admin/admin.css">
@@ -36,8 +36,8 @@
 </nav>
 
 <div id="body_dash">
-<!--     {%include file="$root/template/common/sidebar.html"%} -->
-<div id="admin" class="admin_sidebar">
+    <!-- {%include file="$root/template/common/sidebar.html"%} -->
+    <div id="admin" class="admin_sidebar">
     <div id="userPic">
       <img src="../../image/head.png">
     </div>
@@ -48,44 +48,52 @@
 
     <div id="admin_menu">
       <a class="admin_button choose" href="../admin/admin_dashboard.html">网站状态</a>
-      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>查看用户</a>
-      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>查看作品</a>
-      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>审核验证</a>
       <a class="admin_button" href="../admin/admin_manage.html">管理物料</a>
+      <a class="admin_button" href="../account/designer_manage.html"><div id="sidebar_message">12</div>认证申请</a>
+      <a class="admin_button" href="../account/designer_manage.html">权限管理</a>
+      <a class="admin_button" href="../account/designer_manage.html">个人信息</a>
     </div>    
 </div>
+
   <div id="admin_main">
-<!--       <div id="admin_content">
-          <div class="admin_total">总共上传
-            <div class="admin_total_num">34095</div>
-          </div>
-          <div class="admin_history">上传记录
-            <div class="admin_history_detail">2017.1.2上传456条
-            </div>
-          </div>
-      </div> -->
-      <div class="dash_top">Dashboard Overview</div>
-      <div class="dash_main">
-        <div class="each_status status_grey">
-          <i class="fa fa-user-o" aria-hidden="true"></i>
-          <span class="status_title">用户</span>
-          <span class="status_num">129</span>
-        </div>
-        <div class="each_status status_orange">
-          <i class="fa fa-picture-o" aria-hidden="true"></i>
-          <span class="status_title">作品</span>
-          <span class="status_num">56</span>
-        </div>
-        <div class="each_status status_blue">
-          <i class="fa fa-cubes" aria-hidden="true"></i>
-          <span class="status_title">物料</span>
-          <span class="status_num">3199</span>
-        </div>
-      </div>
+    <div class="dash_top">查看所有用户</div>
+      
+      <div id="admin_content">
+
+
+      <table id="dashList">
+        <tr>
+          <th>头像</th>
+          <th>用户名</th>
+          <th>用户类型</th>
+          <th>注册时间</th>
+          <th></th>
+        </tr>
+        <tr >
+          <td><img id="user_pic" src="../../image/designers/james.png"></td>   
+          <td>James</td>
+          <td>用户</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            </br>
+            <a id="delete" href="#" onclick="return del(this)">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><img id="user_pic" src="../../image/designers/sarah.png"></td>
+          <td>Andrew</td>
+          <td>设计师</td>
+          <td>2017.4.1 23:59:34</td>
+          <td>
+            <a id="edit" href="#">修改</a>
+            </br>
+            <a id="delete" href="#" onclick="return del(this)">删除</a>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
-
-
-
-  </body>
+</body>
 </html>

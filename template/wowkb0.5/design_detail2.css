@@ -1,0 +1,390 @@
+body, html{
+    margin:0;
+    padding:0;
+    width:100%;
+    max-width: 100vw;
+}
+.design_detail_body {
+    margin-top:50px;
+}
+#top_share_button {
+    display: none;
+}
+#myCarousel {
+    width: 100%;
+}
+
+#right_page_button {
+    display: none;
+}
+#button_start_customize_small {
+    background-color: #FF6500;
+    width: 100%;
+    height: 84px;
+    font-size: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+#button_start_customize_small .side_button_icon{
+    width: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+}
+
+#right_header {
+    width: 100%;
+    background-color: rgba(235, 235, 235, 1);
+    display: inline-block;
+}
+
+/*               Designer               */
+.design_project_designer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.designer_name{
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    display:block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.designer_major{
+    display: block;
+    color: #ff6500;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.designer_school{
+    display: block;
+    font-size: 14px;
+    color: #afafaf;
+    margin-top: 4px;
+}
+.designer_software{
+    display: block;
+    font-size: 12px;
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.software_title{
+    display: block;
+    margin-bottom: 14px;
+    padding-top: 20px;
+    color: #afafaf;
+    border-top: 1px solid #d5d5d5;
+}
+.each_software{
+    border:1px solid #ff6500;
+    border-radius: 20px;
+    margin:3px 3px 8px 3px;
+    font-size: 12px;
+    color: #ff6500;
+    padding: 2px 6px 2px 6px;
+    display: inline-block;
+}
+#design_project_designer_head{
+    width: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 88px;
+}
+.designer_contact{
+    margin-top: 20px;
+    color: #afafaf;
+}
+.design_project_designer_intro{
+    border:0px solid green;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.design_project_designer_des{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid red;
+    color: #383838;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+/*               Design description                */
+.design_intro_top{
+    font-size: 14px;
+    color: #383838;
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/*               Design material list                */
+.material_content{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-top: 80px;
+    font-size: 14px;
+    color: #383838;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.material_content h4{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.material_content table{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+}
+.material_content table tr td{
+    border: 1px solid #d5d5d5;
+    padding: 0px;
+    color:#7a7a7a;
+    text-align: left;
+    font-size: 0;
+}
+.material_content table tr td .list_word{
+    display: inline-block;
+    vertical-align: top;
+    width: 218px;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.material_content table tr td img{
+    width: 100px;
+    height: 76px;
+    display: inline-block;
+}
+#design_material_list .material_content table tr td h5{
+    font-size: 15px;
+    color: #383838;
+}
+#design_material_list .material_content table tr td .material_detail{
+    font-size: 13px;
+}
+
+/*               Relate works               */
+.related_design_content{
+    text-align: center;
+    margin-top: 110px;
+}
+.related_design_content h4{
+    margin-bottom: 20px;
+}
+.each_relate_design img{
+    width: 236px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.each_relate_intro{
+    font-size: 14px;
+    color: #383838;
+    margin-top: 4px;
+}
+
+/*               Share               */
+#share_icons {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    width: 100%;
+}
+#share_icons h4{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.share_icons_content {
+     width: 80%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+.share_icon span {
+    margin: 1px;
+}
+
+/*          Form costomize          */
+#form_customize {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top:8vh;
+    left:0;
+    max-width: 100% !important;
+    height: 55vh;
+    font-size: medium;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+#form_customize .form_title {
+    margin: 0;
+}
+#form_customize input {
+    width: 100%;
+}
+#form_customize_submitBtn {
+    margin: 10px auto;
+}
+
+@media only screen and (min-device-width: 780px) {
+    .design_detail_body {
+        margin-top:0;
+    }
+
+    #myCarousel {
+        height: 100vh;
+    }
+    .carousel img {
+        width: 100%;
+        min-width: 1350px;
+        max-height: 100vh;
+        min-height: 100vh;
+    }
+
+    #top_share_button{
+        display: none;
+        position: absolute;
+        z-index: 100;
+        right: 84px;
+        top: 413px;
+    }
+    #share_buttons{
+        display: inline-block;
+        background-color: black;
+        height: 84px;
+        padding: 22px;
+        padding-left: 10px;
+    }
+    .share_icon span {
+        width: 40px;
+        height: 40px;
+        margin-left: 12px;
+    }
+    #share_button {
+        display: block;
+    }
+    .share_button{
+        border: 0px solid red;
+        text-align: center;
+        display: inline-block;
+    }
+    #facebook{
+        background-color:#3b5998;
+        position: relative;
+    }
+    #twitter{
+        background-color: #00aced;
+    }
+    #insta{
+        background-color: #ecce88;
+    }
+    #tumblr{
+        background-color: #283851
+    }
+    #wechat{
+        background-color: #7bb32e;
+    }
+
+    #right_page_button {
+        display: block;
+        height: 100vh;
+        background-color: #121212;
+        position: absolute;
+        font-size: 0;
+        right:0;
+        top:0;
+        z-index: 100;
+        padding-top:50px;
+    }
+    #button_designer img{
+        width: 50px !important;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top_button{
+        height: 110px !important;
+    }
+    .top_button img{
+        border-radius: 50px;
+    }
+    #button_start_customize_small {
+        display: none;
+    }
+    #right_page_button .button{
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        height: 84px;
+        width: 84px;
+        padding-top: 8px;
+    }
+    #right_page_button i{
+        margin-bottom: 8px;
+    }
+    #right_page_button .button:hover{
+        background-color: #383838;
+        text-decoration: none;
+    }
+    #right_page_button .choose_button{
+        font-size: 12px;
+        background-color: #383838;
+        color: #fff;
+        text-align: center;
+        height: 84px;
+        width: 84px;
+        padding-top: 8px;
+    }
+    .side_button_icon{
+        width: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4px;
+    }
+
+    #right_header {
+        position: fixed;
+        height: 100vh;
+        width: 360px;
+        background-color: rgba(255, 255, 255, 1);
+        display: inline-block;;
+        vertical-align: top;
+        overflow-y:scroll;
+        top: 0;
+        right: -317px;
+        z-index: 50;
+        -webkit-transition: right 0.2s ease-out;
+        -moz-transition: right 0.2s ease-out;
+        transition: right 0.2s ease-out;
+        cursor: pointer;
+    }
+    .right_header_hide {
+        width: 0;
+    }
+
+    #share_icons {
+        display: none;
+    }
+}
