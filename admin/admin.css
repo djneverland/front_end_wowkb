@@ -31,6 +31,20 @@
 	padding-left: 10px;
 	margin-top: 10px;
 }
+.top_area{
+	border: 0px solid red;
+}
+.label_select{
+	border: 0px solid red;
+	display: block;
+}
+.select_area{
+	border: 0px solid red;
+	padding-bottom: 20px;
+}
+.top_select{
+	margin-right: 20px;
+}
 .each_status{
 	width: 260px;
 	height: 260px;
@@ -65,10 +79,10 @@
 	color: #73A3EC;
 }
 #authorize_user{
-	display: block;
+	display: none;
 }
 #authorize_design{
-	display: none;
+	display: block;
 }
 
 /*上传*/

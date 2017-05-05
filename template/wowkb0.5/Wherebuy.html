@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOWKB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../common/css/common_temp.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/temporary.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/99d52acf31.js"></script>
+</head>
+<body>
+
+
+
+<div class="page_intro">
+  <div class="page_intro_up">
+    <h2 id="trnas1">WHERE TO BUY</h2>
+  </div>
+  <div class="pageheader_bg"></div>
+    <img class="pageheader" class="pageheader" src="../../image/pageheader.png">   
+</div>
+
+<div id="body">
+  <div class="aboutus_gapline"></div>
+  <!-- <div id="map"></div> -->
+  <div id="map" style="width: 1200px; height: 600px;"></div>
+  <div class="contact_info">
+    <h4 id="trnas7">Contact Us</h4>
+    <p>
+      customerservice@wowkb.com</br>
+      97 E Brokaw Road, #310</br>
+      San Jose, CA 95112
+    </p>
+  </div>
+
+
+<div class="bottom_space"></div>
+</div>
+    // <script>
+    //       function initMap() {
+    //         // Create a map object and specify the DOM element for display.
+    //         var map = new google.maps.Map(document.getElementById('map'), {
+    //           center: {lat: 37.37545, lng: -121.91640},
+    //           scrollwheel: false,
+    //           zoom: 12
+    //         });
+    //         marker = new google.maps.Marker({
+    //           map: map,
+    //           draggable: true,
+    //           animation: google.maps.Animation.DROP,
+    //           position: {lat: 37.37545, lng: -121.91640}
+    //         });
+    //         marker.addListener('click', toggleBounce);
+    //       }
+    //       function toggleBounce() {
+    //         if (marker.getAnimation() !== null) {
+    //           marker.setAnimation(null);
+    //         } else {
+    //         marker.setAnimation(google.maps.Animation.BOUNCE);
+    //   }
+    // }
+    // </script>
+<script type="text/javascript">
+// The following example creates complex markers to indicate beaches near
+// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+// to the base of the flagpole.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: {lat: 37.6, lng: -122.2}
+  });
+
+  setMarkers(map);
+}
+
+// Data for the markers consisting of a name, a LatLng and a zIndex for the
+// order in which these markers should display on top of each other.
+var retails = [
+  ['Dakota Kitchen & Design Inc.', 46.7913008, -100.7629162, 20],
+  ['Kitchens Direct', 40.3480983, -111.7407798, 19],
+  ['Innovation Cabinet & Design', 40.580474, -112.018071, 18],
+  ['KIB Direct Inc.', 40.509993, -112.031727, 17],
+  ['Interior Passions Kitchen & Bath Design', 39.751321, -75.045404, 16],
+  ['JK58 Cabinet & Granite', 27.293687, -82.5293389, 15],
+  ['Cabinets Now LLC.', 36.1102279, -115.1913871, 14],
+  ['Clint Paulding Countertops Inc.', 48.123734, -114.2599, 13],
+  ['SRC Contracting', 47.755961, -116.763556, 12],
+  ['Ranco Interiors Ltd.', 51.0846094, -114.2067543, 11],
+  ['Destiny Flooring and Cabinets', 37.3741076, -121.9064099, 10],
+  ['Empire Flooring & Design Center', 37.379953, -121.910918, 9],
+  ['Urban Home Design, Inc.', 37.3819534, -121.908822, 8],
+  ['NK Kitchen & Bath', 37.375373, -121.894267, 7],
+  ['Floor Concepts & Design Center', 37.2695346, -121.9377279, 6],
+  ['Gew Hardwood Flooring Inc.', 37.5017179, -121.951135, 5],
+  ['ZMC Products', 37.507353, -121.962432, 4],
+  ['Best Marble', 37.4796734, -122.2223642, 3],
+  ['HB Kitchen Bath Inc.', 37.6060562, -122.0605732, 2],
+  ['Golden Stone Inc.', 37.6606445, -122.1159366, 1]
+];
+
+function setMarkers(map) {
+  // Adds markers to the map.
+
+  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+  // (0,0) is located in the top left of the image.
+
+  // Origins, anchor positions and coordinates of the marker increase in the X
+  // direction to the right and in the Y direction down.
+  var image = {
+    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(20, 32),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(0, 32)
+  };
+  // Shapes define the clickable region of the icon. The type defines an HTML
+  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+  // The final coordinate closes the poly by connecting to the first coordinate.
+  var shape = {
+    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+    type: 'poly'
+  };
+  var contentString ='<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+       '</p>'+
+      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      '(last visited June 22, 2009).</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  for (var i = 0; i < retails.length; i++) {
+    var store = retails[i];
+    var marker = new google.maps.Marker({
+      position: {lat: store[1], lng: store[2]},
+      map: map,
+      icon: image,
+      shape: shape,
+      title: store[0],
+      zIndex: store[3]
+    });
+    marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+  }
+}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAr7z43-TMU2Ezj3wT5m2S_FTzFnlWiGE&callback=initMap"
+    async defer></script>
+</body>
+</html>
+

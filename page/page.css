@@ -2,10 +2,13 @@
 
 /*动态头图*/
 #hero{
-  background-image:url(../image/header_pic.jpg);
+/*  background-image:url(../image/header_pic.jpg);*/
   background-size:cover;
   position:relative;
   height:100vh;
+}
+#hero img{
+  min-height:100vh;
 }
 #header_bg{
   background-color:#000;
