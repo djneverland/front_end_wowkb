@@ -57,88 +57,42 @@
 
   <div id="admin_main">
     <div class="dash_top">
-      <span class="dash_top_button" id="button_design">审核作品</span>
-      <span class="dash_unchoose" id="button_user">审核用户</span>   
-      <a class="dash_top_right button_orange" id="add_supplier">添加供应商</a>
+      <a href="#">返回</a> / 添加供应商
     </div>
       
     <div id="admin_content">
+      <div class="top_area">
+        <span class="label_select"></span>
+        <div class="select_area">
+            <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />JK</label> 
+            <label class="checkbox-inline"><input name="" type="checkbox" id="inlineCheckbox1" value="" />Hausglobal</label> 
+        </div>
+        <input type="submit" class="button_light_input">
+      </div>
 
-    <div id="authorize_design">
       <table id="dashList">
         <tr>
+          <th><input type="checkbox"></th>
           <th>图片</th>
           <th>作品ID</th>
           <th>作品名称</th>
-          <th>作品风格</th>
-          <th>设计师</th>
-          <th>上传时间</th>
-          <th></th>
+          <th>供应商</th>
         </tr>
         <tr >
+          <td><input type="checkbox"></td>
           <td><img id="design_pic" src="../../image/customize/A7/design.jpg"></td>
           <td>123</td>   
           <td>Sunshine Kitchen</td>
-          <td>Chinese Style</td>
-          <td>James</td>
-          <td>2017.4.1 23:59:34</td>
-          <td>
-            <a id="pass" href="#">通过</a>
-            </br>
-            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
-          </td>
+          <td>JK</td>
         </tr>
         <tr>
+          <td><input type="checkbox"></td>
           <td><img id="design_pic" src="../../image/customize/k3/design.jpg"></td>
           <td>123</td>
           <td>Favorite Kitchen</td>
-          <td>Traditional style</td>
-          <td>Sarah</td>
-          <td>2017.4.1 23:59:34</td>
-          <td>
-            <a id="pass" href="#">通过</a>
-            </br>
-            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
-          </td>
+          <td>Hausglobal</td>
         </tr>
       </table>
-    </div>
-
-      <div id="authorize_user">
-      <table id="dashList">
-        <tr>
-          <th>用户名</th>
-          <th>用户类型</th>
-          <th>邮箱</th>
-          <th>注册时间</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>James</td>
-          <td>用户</td>
-          <td>James@gmail.com</td>
-          <td>2017.4.1 23:59:34</td>
-          <td>
-            <a id="pass" href="#">通过</a>
-            </br>
-            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
-          </td>
-        </tr>
-        <tr>
-          <td>Sarah</td>
-          <td>设计师</td>
-          <td>Sarah@gmail.com</td>
-          <td>2017.4.1 23:59:34</td>
-          <td>
-            <a id="pass" href="#">通过</a>
-            </br>
-            <a id="deny" href="#" onclick="return del(this)">拒绝</a>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-
 
 
     </div><!--admin_content-->
@@ -148,27 +102,5 @@
 
   </div>
 </div>
-<script type="text/javascript">
-var user = document.getElementById('button_user');
-var design = document.getElementById('button_design');
-var user_page = document.getElementById('authorize_user');
-var design_page = document.getElementById('authorize_design');
-var add = document.getElementById('add_supplier');
-
-user.onclick = function(){
-  user.className = "dash_top_button";
-  design.className = "dash_unchoose";
-  user_page.style.display = "block";
-  design_page.style.display = "none";
-  add.style.display = "none";
-}
-design.onclick = function(){
-  design.className = "dash_top_button";
-  user.className = "dash_unchoose";
-  design_page.style.display = "block";
-  user_page.style.display = "none";
-  add.style.display = "inline-block";
-}
-</script>
 </body>
 </html>
